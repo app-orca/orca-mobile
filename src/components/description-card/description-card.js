@@ -8,7 +8,7 @@ import propTypes from 'prop-types';
 
 const DescriptionCard = ({label, style, onPress}) => (
   <TouchableOpacity
-    {...onPress}
+    {...{onPress}}
     activeOpacity={0.8}
     style={[styles.container, style]}>
     <CircleAvatar
