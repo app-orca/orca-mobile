@@ -11,6 +11,6 @@ export default StyleSheet.create({
     ...styles.h1,
     ...styles.m0,
     ...styles.textWhite,
-    fontSize: 30,
+    fontSize: 20,
   },
 });

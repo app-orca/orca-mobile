@@ -19,7 +19,7 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.wrapper}>
-      <CircleAvatar style={styles.companyLogo} size={160} label="ORCA" />
+      <CircleAvatar style={styles.companyLogo} label="ORCA" />
       <View style={styles.optionsContainer}>
         <FlatList
           style={styles.optionsList}
