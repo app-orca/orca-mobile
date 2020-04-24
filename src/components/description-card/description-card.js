@@ -1,12 +1,16 @@
 import React from 'react';
-import {View, Text, ViewPropTypes} from 'react-native';
 import CircleAvatar from '../circle-avatar/circle-avatar';
+import {Text, ViewPropTypes} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 import styles from './description-card.style';
 import propTypes from 'prop-types';
 
-const DescriptionCard = ({label, style}) => (
-  <View style={[styles.container, style]}>
+const DescriptionCard = ({label, style, onPress}) => (
+  <TouchableOpacity
+    {...onPress}
+    activeOpacity={0.8}
+    style={[styles.container, style]}>
     <CircleAvatar
       size={80}
       label={label
@@ -15,12 +19,13 @@ const DescriptionCard = ({label, style}) => (
         .join('')}
     />
     <Text style={styles.descriptionText}>{label}</Text>
-  </View>
+  </TouchableOpacity>
 );
 
 DescriptionCard.propTypes = {
   label: propTypes.string,
   style: ViewPropTypes.style,
+  onPress: propTypes.func,
 };
 
 export default DescriptionCard;
