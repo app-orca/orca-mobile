@@ -10,7 +10,7 @@ export default StyleSheet.create({
     flex: 1,
   },
   cardText: {
-    ...styles.h3,
+    ...styles.h4,
     ...styles.m0,
     textAlign: 'center',
     paddingVertical: 20,

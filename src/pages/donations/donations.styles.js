@@ -4,7 +4,7 @@ import styles from '../../styles';
 export default StyleSheet.create({
   descriptionCard: {
     marginHorizontal: 20,
-    marginBottom: 20,
+    marginTop: 20,
   },
   headerContainer: {
     paddingVertical: 20,
@@ -15,6 +15,9 @@ export default StyleSheet.create({
   },
   content: {
     ...styles.flexOne,
+    backgroundColor: '#1e1e1e',
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
   },
   wrapper: {
     ...styles.flexOne,

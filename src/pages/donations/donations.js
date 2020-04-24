@@ -1,4 +1,5 @@
 import React from 'react';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {View, FlatList} from 'react-native';
 import {DescriptionCard, CircleAvatar, Text} from '../../components';
 
@@ -12,10 +13,10 @@ const donationOptions = [
 ];
 
 const Donations = () => (
-  <View style={styles.wrapper}>
+  <SafeAreaView style={styles.wrapper}>
     <View style={styles.headerContainer}>
-      <CircleAvatar size={100} label="ORCA" />
-      <Text style={styles.headerTitle} h1>
+      <CircleAvatar size={80} label="ORCA" />
+      <Text style={styles.headerTitle} h2>
         Donaciones
       </Text>
     </View>
@@ -30,7 +31,7 @@ const Donations = () => (
       )}
       keyExtractor={(_, index) => `${index}`}
     />
-  </View>
+  </SafeAreaView>
 );
 
 export default Donations;

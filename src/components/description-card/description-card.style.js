@@ -10,8 +10,9 @@ export default StyleSheet.create({
     padding: 20,
   },
   descriptionText: {
-    ...styles.h3,
+    ...styles.h4,
     ...styles.m0,
+    ...styles.flexOne,
     marginLeft: 10,
   },
 });
