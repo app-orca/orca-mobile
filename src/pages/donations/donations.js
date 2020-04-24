@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, FlatList} from 'react-native';
 import {DescriptionCard, CircleAvatar, Text} from '../../components';
 
 import styles from './donations.styles';
@@ -12,19 +12,24 @@ const donationOptions = [
 ];
 
 const Donations = () => (
-  <View>
+  <View style={styles.wrapper}>
     <View style={styles.headerContainer}>
       <CircleAvatar size={100} label="ORCA" />
       <Text style={styles.headerTitle} h1>
         Donaciones
       </Text>
     </View>
-    {donationOptions.map(donationOption => (
-      <DescriptionCard
-        style={styles.descriptionCard}
-        label={donationOption.label.toUpperCase()}
-      />
-    ))}
+    <FlatList
+      style={styles.content}
+      data={donationOptions}
+      renderItem={({item}) => (
+        <DescriptionCard
+          style={styles.descriptionCard}
+          label={item.label.toUpperCase()}
+        />
+      )}
+      keyExtractor={(_, index) => `${index}`}
+    />
   </View>
 );
 
