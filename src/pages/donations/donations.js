@@ -4,6 +4,13 @@ import {DescriptionCard, CircleAvatar, Text} from '../../components';
 
 import styles from './donations.styles';
 
+const donationOptions = [
+  {label: 'Plan alcancía'},
+  {label: 'Plan padrino'},
+  {label: 'Donación Única'},
+  {label: 'Donación empresarial'},
+];
+
 const Donations = () => (
   <View>
     <View style={styles.headerContainer}>
@@ -12,13 +19,12 @@ const Donations = () => (
         Donaciones
       </Text>
     </View>
-    <DescriptionCard style={styles.descriptionCard} label="PLAN ALCANCÍA" />
-    <DescriptionCard style={styles.descriptionCard} label="PLAN PADRINO" />
-    <DescriptionCard style={styles.descriptionCard} label="DONACIÓN ÚNICA" />
-    <DescriptionCard
-      style={styles.descriptionCard}
-      label="DONACIÓN EMPRESARIAL"
-    />
+    {donationOptions.map(donationOption => (
+      <DescriptionCard
+        style={styles.descriptionCard}
+        label={donationOption.label.toUpperCase()}
+      />
+    ))}
   </View>
 );
 
