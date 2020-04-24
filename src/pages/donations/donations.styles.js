@@ -8,4 +8,8 @@ export default StyleSheet.create({
   headerContainer: {
     paddingVertical: 20,
   },
+  headerTitle: {
+    textAlign: 'center',
+    marginTop: 20,
+  },
 });
