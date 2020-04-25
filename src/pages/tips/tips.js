@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {HeaderNav} from '../../components';
+import {View} from 'react-native';
+import {HeaderNav, OptionCard} from '../../components';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import styles from './tips.styles';
@@ -12,7 +12,10 @@ const Tips = ({navigation}) => {
     <SafeAreaView style={styles.wrapper}>
       <View style={styles.wrapper}>
         <HeaderNav title="Tips" onGoHomePress={handleGoHomePress} />
-        <Text>Tips works!</Text>
+        <View style={styles.optionsWrapper}>
+          <OptionCard style={styles.optionCard} title="Caninos" />
+          <OptionCard style={styles.optionCard} title="Felinos" />
+        </View>
       </View>
     </SafeAreaView>
   );

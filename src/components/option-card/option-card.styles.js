@@ -7,7 +7,7 @@ export default StyleSheet.create({
     elevation: 5,
     paddingTop: 50,
     borderRadius: 20,
-    flex: 1,
+    justifyContent: 'flex-end',
   },
   cardText: {
     ...styles.h4,

@@ -16,6 +16,7 @@ export default StyleSheet.create({
     ...styles.flexOne,
   },
   optionCard: {
+    ...styles.flexOne,
     margin: 10,
   },
 });
