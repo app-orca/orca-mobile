@@ -21,7 +21,7 @@ const HeaderNav = ({onBackPress, onGoHomePress, title}) => (
         )}
       </View>
     </View>
-    <CircleAvatar label="ORCA" size={90} />
+    <CircleAvatar label="ORCA" size={80} />
     <Text style={styles.navTitle} h3>
       {title}
     </Text>

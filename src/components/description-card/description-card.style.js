@@ -7,12 +7,14 @@ export default StyleSheet.create({
     ...styles.alignItemsCenter,
     borderRadius: 20,
     backgroundColor: 'white',
-    padding: 20,
+    padding: 10,
   },
   descriptionText: {
     ...styles.h4,
     ...styles.m0,
     ...styles.flexOne,
+    textAlign: 'center',
+    fontSize: 13,
     marginLeft: 10,
   },
 });

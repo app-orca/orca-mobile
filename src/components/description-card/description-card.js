@@ -12,7 +12,7 @@ const DescriptionCard = ({label, style, onPress}) => (
     activeOpacity={0.8}
     style={[styles.container, style]}>
     <CircleAvatar
-      size={70}
+      size={60}
       label={label
         .split(' ')
         .map(word => word[0])

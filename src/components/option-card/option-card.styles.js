@@ -13,6 +13,7 @@ export default StyleSheet.create({
     ...styles.h4,
     ...styles.m0,
     textAlign: 'center',
+    fontSize: 14,
     paddingVertical: 20,
     paddingHorizontal: 30,
   },

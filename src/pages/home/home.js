@@ -29,7 +29,7 @@ const Home = ({navigation}) => {
             <OptionCard
               onPress={() => handleOptionPress(item.screen)}
               style={styles.optionCard}
-              title={item.label}
+              title={item.label.toUpperCase()}
             />
           )}
           keyExtractor={(_, index) => index}

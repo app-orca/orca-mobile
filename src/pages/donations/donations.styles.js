@@ -15,9 +15,6 @@ export default StyleSheet.create({
   },
   content: {
     ...styles.flexOne,
-    backgroundColor: '#1e1e1e',
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
   },
   wrapper: {
     ...styles.flexOne,
