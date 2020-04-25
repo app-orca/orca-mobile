@@ -28,6 +28,9 @@ export default StyleSheet.create({
   alignItemsCenter: {
     alignItems: 'center',
   },
+  alignItemsStretch: {
+    alignItems: 'stretch',
+  },
   centerItems: {
     justifyContent: 'center',
     alignItems: 'center',

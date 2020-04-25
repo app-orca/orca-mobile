@@ -6,7 +6,7 @@ export default StyleSheet.create({
     ...styles.flexOne,
   },
   companyLogo: {
-    marginBottom: 30,
+    marginVertical: 20,
   },
   optionsContainer: {
     ...styles.flexOne,
@@ -16,6 +16,7 @@ export default StyleSheet.create({
     ...styles.flexOne,
   },
   optionCard: {
+    ...styles.flexOne,
     margin: 10,
   },
 });
