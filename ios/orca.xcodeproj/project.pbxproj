@@ -20,6 +20,10 @@
 		628790D9EAB64B7EA930AC67 /* libPods-orca-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7680C59F969B970E2D00B19F /* libPods-orca-tvOS.a */; };
 		9055A0FB562FAE9FD6646A72 /* libPods-orca-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E52EF26320AC7E35FC0DF50 /* libPods-orca-tvOSTests.a */; };
 		B50EBD76F40E2F329041F7E7 /* libPods-orca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3E3241762023A816FE26A0 /* libPods-orca.a */; };
+		DD4EAEE5921E4C5497ABF6B0 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BAE5827AE546E5834BAF38 /* Nunito-Bold.ttf */; };
+		400B9AC6F0894140BBD960B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0278B71C072A452F9CA6A979 /* OpenSans-Bold.ttf */; };
+		AC6BAD9516904EAD8737EF0D /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6B531B72E6409BA3A78B63 /* OpenSans-Light.ttf */; };
+		EBA5847DD37F4DA9B42B3978 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAE776196052420CA07D210F /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		DD5B7E62166812A3F15A0107 /* Pods-orca-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orca-tvOS.release.xcconfig"; path = "Target Support Files/Pods-orca-tvOS/Pods-orca-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		E6BAE5827AE546E5834BAF38 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; name = "Nunito-Bold.ttf"; path = "../src/assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0278B71C072A452F9CA6A979 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../src/assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D6B531B72E6409BA3A78B63 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; name = "OpenSans-Light.ttf"; path = "../src/assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AAE776196052420CA07D210F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../src/assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				DE7647958409004059B5EEED /* Pods */,
+				F511450507154B709F303A51 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +206,18 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		F511450507154B709F303A51 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				E6BAE5827AE546E5834BAF38 /* Nunito-Bold.ttf */,
+				0278B71C072A452F9CA6A979 /* OpenSans-Bold.ttf */,
+				4D6B531B72E6409BA3A78B63 /* OpenSans-Light.ttf */,
+				AAE776196052420CA07D210F /* OpenSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -342,6 +363,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				DD4EAEE5921E4C5497ABF6B0 /* Nunito-Bold.ttf in Resources */,
+				400B9AC6F0894140BBD960B8 /* OpenSans-Bold.ttf in Resources */,
+				AC6BAD9516904EAD8737EF0D /* OpenSans-Light.ttf in Resources */,
+				EBA5847DD37F4DA9B42B3978 /* OpenSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
