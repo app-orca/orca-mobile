@@ -1,15 +1,15 @@
 import React from 'react';
-import {FlatList} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {DescriptionCard, HeaderNav} from '../../components';
+import {HeaderNav} from '../../components';
+import DonationsMenu from './donations-menu/donations-menu';
 
 import styles from './donations.styles';
 
 const donationOptions = [
-  {label: 'Plan alcancía'},
-  {label: 'Plan padrino'},
-  {label: 'Donación Única'},
-  {label: 'Donación empresarial'},
+  {label: 'Plan alcancía', value: 'ALCANCIA'},
+  {label: 'Plan padrino', value: 'PADRINO'},
+  {label: 'Donación Única', value: 'UNICA'},
+  {label: 'Donación empresarial', value: 'EMPRESARIAL'},
 ];
 
 const Donations = ({navigation}) => {
@@ -18,17 +18,7 @@ const Donations = ({navigation}) => {
   return (
     <SafeAreaView style={styles.wrapper}>
       <HeaderNav onGoHomePress={handleGoHomePress} title="Donaciones" />
-      <FlatList
-        style={styles.content}
-        data={donationOptions}
-        renderItem={({item}) => (
-          <DescriptionCard
-            style={styles.descriptionCard}
-            label={item.label.toUpperCase()}
-          />
-        )}
-        keyExtractor={(_, index) => `${index}`}
-      />
+      <DonationsMenu options={donationOptions} />
     </SafeAreaView>
   );
 };
