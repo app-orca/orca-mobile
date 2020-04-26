@@ -12,6 +12,7 @@ const MainStackNavigator = () => (
     <Stack.Screen name="Home" component={Home} />
     <Stack.Screen name="Calendar" component={Calendar} />
     <Stack.Screen name="Donations" component={Donations} />
+
   </Stack.Navigator>
 );
 

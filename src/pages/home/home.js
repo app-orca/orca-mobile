@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
-import {OptionCard} from '../../components';
+import {OptionCard, Socialmedia} from '../../components';
 import styles from './home.styles';
+
 
 const options = [
   {screen: 'Pet', label: 'Felinos'},
@@ -31,6 +32,7 @@ const Home = ({navigation}) => {
         )}
         keyExtractor={(_, index) => index}
       />
+      <Socialmedia/>
     </View>
   );
 };
