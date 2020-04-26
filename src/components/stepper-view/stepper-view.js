@@ -1,23 +1,27 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 
-// import styles from './stepper-view.styles';
+import styles from './stepper-view.styles';
 import propTypes from 'prop-types';
 
 /**
  * Renders a series of steps with passed screens,
  * it renders all passed compoents, so be careful using this
  */
-const StepperView = ({screens, currentIndex}) => {
+const StepperView = ({children, currentIndex}) => {
+  const pages = Object.keys(children).map((page, i) => (
+    <View style={styles.page}>{children[page]}</View>
+  ));
+
   return (
-    <View>
-      <Text>StepperView works!</Text>
+    <View style={styles.wrapper}>
+      {pages[currentIndex > pages.length ? 0 : currentIndex]}
     </View>
   );
 };
 
 StepperView.propTypes = {
-  screens: propTypes.arrayOf(propTypes.node),
+  children: propTypes.node,
   currentIndex: propTypes.number,
 };
 
