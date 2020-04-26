@@ -8,7 +8,7 @@ import propTypes from 'prop-types';
  * Renders a series of steps with passed screens,
  * it renders all passed compoents, so be careful using this
  */
-const StepperView = ({screens}) => {
+const StepperView = ({screens, currentIndex}) => {
   return (
     <View>
       <Text>StepperView works!</Text>
