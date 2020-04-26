@@ -2,11 +2,11 @@ import {StyleSheet} from 'react-native';
 
 const baseFont = {
   title: {
-    fontWeight: 'bold',
+    fontFamily: 'Nunito-Bold',
     marginBottom: 10,
   },
   text: {
-    fontWeight: 'normal',
+    fontFamily: 'OpenSans-Regular',
     fontSize: 16,
     marginBottom: 7,
   },

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
-import {OptionCard, Socialmedia} from '../../components';
+import {OptionCard,Socialmedia} from '../../components';
+
 import styles from './home.styles';
 
 
@@ -21,7 +22,6 @@ const Home = ({navigation}) => {
       <FlatList
         style={styles.optionsList}
         numColumns={2}
-        contentInset={{bottom: 10, left: 10, top: 10, right: 10}}
         data={options}
         renderItem={({item}) => (
           <OptionCard

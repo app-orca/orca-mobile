@@ -8,11 +8,14 @@ const MainStackNavigator = () => (
   <Stack.Navigator initialRouteName="Home">
     <Stack.Screen name="Pet" component={Pet} />
     <Stack.Screen name="Lost" component={Lost} />
-    <Stack.Screen name="Tips" component={Tips} />
-    <Stack.Screen name="Home" component={Home} />
+    <Stack.Screen name="Tips" component={Tips} options={{headerShown: false}} />
+    <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
     <Stack.Screen name="Calendar" component={Calendar} />
-    <Stack.Screen name="Donations" component={Donations} />
-
+    <Stack.Screen
+      name="Donations"
+      component={Donations}
+      options={{headerShown: false}}
+    />
   </Stack.Navigator>
 );
 

@@ -4,12 +4,19 @@ import styles from '../../styles';
 export default StyleSheet.create({
   wrapper: {
     ...styles.flexOne,
-    padding: 20,
+  },
+  companyLogo: {
+    marginVertical: 20,
+  },
+  optionsContainer: {
+    ...styles.flexOne,
+    paddingHorizontal: 10,
   },
   optionsList: {
-    flex: 1,
+    ...styles.flexOne,
   },
   optionCard: {
+    ...styles.flexOne,
     margin: 10,
   },
 });

@@ -2,19 +2,19 @@ import {StyleSheet} from 'react-native';
 import styles from '../../styles';
 
 export default StyleSheet.create({
-  optionCardWrapper: {
-    backgroundColor: 'white',
-    elevation: 5,
-    paddingTop: 50,
+  container: {
+    ...styles.flexRow,
+    ...styles.alignItemsCenter,
     borderRadius: 20,
-    justifyContent: 'flex-end',
+    backgroundColor: 'white',
+    padding: 10,
   },
-  cardText: {
+  descriptionText: {
     ...styles.h4,
     ...styles.m0,
+    ...styles.flexOne,
     textAlign: 'center',
-    fontSize: 14,
-    paddingVertical: 20,
-    paddingHorizontal: 30,
+    fontSize: 13,
+    marginLeft: 10,
   },
 });
