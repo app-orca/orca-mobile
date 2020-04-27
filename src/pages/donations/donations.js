@@ -17,7 +17,7 @@ const donationOptions = [
 
 const Donations = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedDonation, setSelecteDonation] = useState({});
+  const [selectedDonation, setSelecteDonation] = useState(donationOptions[0]);
 
   const handleGoHomePress = () => navigation.popToTop();
 
