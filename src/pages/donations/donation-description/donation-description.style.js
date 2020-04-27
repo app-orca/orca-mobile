@@ -5,7 +5,6 @@ export default StyleSheet.create({
   wrapper: {
     ...styles.flexOne,
     ...styles.justifyBetween,
-    paddingTop: 30,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
