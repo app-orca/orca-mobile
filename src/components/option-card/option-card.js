@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import {Text, TouchableOpacity, ViewPropTypes} from 'react-native';
 
@@ -7,7 +6,10 @@ import propTypes from 'prop-types';
 
 const OptionCard = ({title, style, onPress}) => {
   return (
-    <TouchableOpacity {...{onPress}} activeOpacity={0.8} style={[styles.optionCardWrapper, style]}>
+    <TouchableOpacity
+      {...{onPress}}
+      activeOpacity={0.8}
+      style={[styles.optionCardWrapper, style]}>
       <Text style={styles.cardText}>{title}</Text>
     </TouchableOpacity>
   );

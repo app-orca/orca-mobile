@@ -6,6 +6,7 @@ export default StyleSheet.create({
     ...styles.flexOne,
   },
   companyLogo: {
+    alignSelf: 'center',
     marginVertical: 20,
   },
   optionsContainer: {

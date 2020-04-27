@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {OptionCard, CircleAvatar} from '../../components';
+import {OptionCard, CompanyLogo} from '../../components';
 
 import styles from './home.styles';
 
@@ -19,7 +19,7 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.wrapper}>
-      <CircleAvatar style={styles.companyLogo} label="ORCA" />
+      <CompanyLogo style={styles.companyLogo} size={130} />
       <View style={styles.optionsContainer}>
         <FlatList
           style={styles.optionsList}

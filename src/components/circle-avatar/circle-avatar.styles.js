@@ -10,7 +10,6 @@ export default StyleSheet.create({
   circleText: {
     ...styles.h1,
     ...styles.m0,
-    ...styles.textWhite,
     fontSize: 20,
   },
 });
