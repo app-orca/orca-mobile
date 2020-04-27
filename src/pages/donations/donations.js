@@ -40,7 +40,7 @@ const Donations = ({navigation}) => {
         onGoHomePress={handleGoHomePress}
         title="Donaciones"
       />
-      <StepperView {...{currentIndex}}>
+      <StepperView style={styles.wrapper} {...{currentIndex}}>
         <DonationsMenu
           onOptionPress={handleOptionPress}
           options={donationOptions}

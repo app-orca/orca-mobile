@@ -14,17 +14,28 @@ const TIPS_OPTIONS = [
 const Tips = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [screenTitle, setScreenTitle] = useState('Tips');
-  const [selectedPetType, setSelectedPetType] = useState(TIPS_OPTIONS[0]);
+  const [selectedPetType, setSelectedPetType] = useState(TIPS_OPTIONS[0].value);
 
   const handleGoHomePress = () => navigation.popToTop();
 
   const handleOptionPress = data => {
-    console.log(data);
+    const selected = TIPS_OPTIONS.find(option => option.value === data);
+
+    setScreenTitle('Tips ' + selected.label);
+    setSelectedPetType(data);
     setCurrentIndex(1);
   };
 
   const handleGoBackPress =
-    currentIndex <= 0 ? null : () => setCurrentIndex(currentIndex - 1);
+    currentIndex <= 0
+      ? null
+      : () => {
+          if (currentIndex - 1 === 0) {
+            setScreenTitle('Tips');
+          }
+
+          setCurrentIndex(currentIndex - 1);
+        };
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -35,7 +46,7 @@ const Tips = ({navigation}) => {
       />
       <StepperView {...{currentIndex}}>
         <TipsMenu onOptionPress={handleOptionPress} options={TIPS_OPTIONS} />
-        <TipsDescription />
+        <TipsDescription petType={selectedPetType} />
       </StepperView>
     </SafeAreaView>
   );
