@@ -9,9 +9,13 @@ import propTypes from 'prop-types';
  * it renders all passed compoents, so be careful using this
  */
 const StepperView = ({children, currentIndex}) => {
-  const pages = Object.keys(children).map((page, i) => (
-    <View style={styles.page}>{children[page]}</View>
-  ));
+  let pages = [children];
+
+  if (children.length) {
+    pages = Object.keys(children).map((page, i) => (
+      <View style={styles.page}>{children[page]}</View>
+    ));
+  }
 
   return (
     <View style={styles.wrapper}>

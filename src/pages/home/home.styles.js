@@ -11,6 +11,10 @@ export default StyleSheet.create({
   },
   optionsContainer: {
     ...styles.flexOne,
+    ...styles.bgPrimary,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingTop: 10,
     paddingHorizontal: 10,
   },
   optionsList: {

@@ -7,6 +7,6 @@ export default StyleSheet.create({
   },
   descriptionCard: {
     marginHorizontal: 20,
-    marginTop: 20,
+    marginBottom: 20,
   },
 });

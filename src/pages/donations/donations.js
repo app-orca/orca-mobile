@@ -17,7 +17,7 @@ const donationOptions = [
 
 const Donations = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedDonation, setSelecteDonation] = useState({});
+  const [selectedDonation, setSelecteDonation] = useState(donationOptions[0]);
 
   const handleGoHomePress = () => navigation.popToTop();
 
@@ -40,7 +40,7 @@ const Donations = ({navigation}) => {
         onGoHomePress={handleGoHomePress}
         title="Donaciones"
       />
-      <StepperView {...{currentIndex}}>
+      <StepperView style={styles.wrapper} {...{currentIndex}}>
         <DonationsMenu
           onOptionPress={handleOptionPress}
           options={donationOptions}

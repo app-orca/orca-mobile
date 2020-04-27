@@ -10,4 +10,10 @@ export default StyleSheet.create({
   bgLightCornFlower: {
     backgroundColor: '#ABECEF',
   },
+  bgPurple: {
+    backgroundColor: '#371C56',
+  },
+  bgLightPurpe: {
+    backgroundColor: '#8985f2',
+  },
 });
