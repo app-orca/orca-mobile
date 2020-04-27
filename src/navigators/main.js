@@ -1,6 +1,14 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Calendar, Donations, Home, Lost, Pet, Tips} from '../pages';
+import {
+  Calendar,
+  Donations,
+  Home,
+  Lost,
+  Pet,
+  Tips,
+  DescriptionPet,
+} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +24,7 @@ const MainStackNavigator = () => (
       component={Donations}
       options={{headerShown: false}}
     />
+    <Stack.Screen name="DescriptionPet" component={DescriptionPet} />
   </Stack.Navigator>
 );
 
