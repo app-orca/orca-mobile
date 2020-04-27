@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {HeaderNav, StepperView, Text} from '../../components';
+
+import {HeaderNav, StepperView} from '../../components';
 import DonationsMenu from './donations-menu/donations-menu';
+import DonationDescription from './donation-description/donation-description';
+import Donate from './donate/donate';
 
 import styles from './donations.styles';
 
@@ -29,6 +31,8 @@ const Donations = ({navigation}) => {
     setCurrentIndex(1);
   };
 
+  const handleDonatePress = () => setCurrentIndex(2);
+
   return (
     <SafeAreaView style={styles.wrapper}>
       <HeaderNav
@@ -41,9 +45,11 @@ const Donations = ({navigation}) => {
           onOptionPress={handleOptionPress}
           options={donationOptions}
         />
-        <View>
-          <Text>{selectedDonation.label}</Text>
-        </View>
+        <DonationDescription
+          onDonatePress={handleDonatePress}
+          donation={selectedDonation}
+        />
+        <Donate />
       </StepperView>
     </SafeAreaView>
   );

@@ -22,8 +22,8 @@ const HeaderNav = ({onBackPress, onGoHomePress, title}) => (
       </View>
     </View>
     <CircleAvatar label="ORCA" size={80} />
-    <Text style={styles.navTitle} h3>
-      {title}
+    <Text style={styles.navTitle} h1>
+      {title.toUpperCase()}
     </Text>
   </View>
 );

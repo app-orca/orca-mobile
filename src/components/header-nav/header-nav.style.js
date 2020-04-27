@@ -16,5 +16,6 @@ export default StyleSheet.create({
   },
   navTitle: {
     marginTop: 10,
+    letterSpacing: 5,
   },
 });
