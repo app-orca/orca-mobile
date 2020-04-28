@@ -48,17 +48,30 @@ const options = [
 const Home = ({navigation}) => {
   const handleOptionPress = screen => navigation.navigate(screen);
 
+  let optionsRows = [...options];
+
+  optionsRows = Array.from(
+    {length: Math.ceil(optionsRows.length / 2)},
+    (v, i) => optionsRows.slice(i * 2, i * 2 + 2),
+  );
+
   return (
     <SafeAreaView style={styles.wrapper}>
       <CompanyLogo style={styles.companyLogo} size={130} />
       <View style={styles.optionsContainer}>
-        {options.map((option, index) => (
-          <TouchableOpacity
-            onPress={() => handleOptionPress(option.screen)}
-            style={styles.menuElement}
-            key={index}>
-            {React.createElement(option.component)}
-          </TouchableOpacity>
+        {optionsRows.map((row, index) => (
+          <View key={`row-${index}`} style={styles.optionsRow}>
+            {row.map((option, itemIndex) => (
+              <TouchableOpacity
+                onPress={() => handleOptionPress(option.screen)}
+                style={styles.option}
+                key={itemIndex}>
+                {React.createElement(option.component, {
+                  height: '100%',
+                })}
+              </TouchableOpacity>
+            ))}
+          </View>
         ))}
       </View>
     </SafeAreaView>
