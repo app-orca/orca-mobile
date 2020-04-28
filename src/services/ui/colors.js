@@ -6,4 +6,6 @@ export default {
   cornFlowerLight: Color.RGBA(171, 236, 239),
   purple: Color.RGBA(55, 28, 86),
   purpleLight: Color.RGBA(137, 133, 242),
+  brown: Color.RGBA(63, 6, 6),
+  brownLight: Color.RGBA(188, 96, 34),
 };
