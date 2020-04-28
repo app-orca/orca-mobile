@@ -1,6 +1,6 @@
 import React from 'react';
 import IconButton from '../icon-button/icon-button';
-import CircleAvatar from '../circle-avatar/circle-avatar';
+import CompanyLogo from '../company-logo/company-logo';
 import Text from '../text/text';
 import {View} from 'react-native';
 
@@ -21,9 +21,9 @@ const HeaderNav = ({onBackPress, onGoHomePress, title}) => (
         )}
       </View>
     </View>
-    <CircleAvatar label="ORCA" size={80} />
-    <Text style={styles.navTitle} h3>
-      {title}
+    <CompanyLogo />
+    <Text style={styles.navTitle} h1>
+      {title.toUpperCase()}
     </Text>
   </View>
 );

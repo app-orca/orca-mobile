@@ -1,9 +1,17 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {MainStackNavigator} from './navigators';
 
+const OrcaTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: '#fbfbfb',
+  },
+};
+
 const App = () => (
-  <NavigationContainer>
+  <NavigationContainer theme={OrcaTheme}>
     <MainStackNavigator />
   </NavigationContainer>
 );
