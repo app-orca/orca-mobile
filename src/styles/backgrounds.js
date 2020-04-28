@@ -1,19 +1,20 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../services/ui';
 
 export default StyleSheet.create({
   bgPrimary: {
-    backgroundColor: '#FFDB12',
+    backgroundColor: colors.primary.toString(),
   },
   bgCornFlower: {
-    backgroundColor: '#44BFBC',
+    backgroundColor: colors.cornFlower.toString(),
   },
   bgLightCornFlower: {
-    backgroundColor: '#ABECEF',
+    backgroundColor: colors.cornFlowerLight.toString(),
   },
   bgPurple: {
-    backgroundColor: '#371C56',
+    backgroundColor: colors.purple.toString(),
   },
   bgLightPurpe: {
-    backgroundColor: '#8985f2',
+    backgroundColor: colors.purpleLight.toString(),
   },
 });
