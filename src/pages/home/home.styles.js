@@ -12,6 +12,8 @@ export default StyleSheet.create({
   },
   optionsContainer: {
     ...styles.flexOne,
+    ...styles.flexRow,
+    flexWrap: 'wrap',
     backgroundColor: colors.primary.withAlpha(0.55).toString(),
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
@@ -24,5 +26,10 @@ export default StyleSheet.create({
   optionCard: {
     ...styles.flexOne,
     margin: 10,
+  },
+  menuElement: {
+    width: '50%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

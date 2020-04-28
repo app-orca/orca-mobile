@@ -1,17 +1,48 @@
 import React from 'react';
-import {View, FlatList} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {OptionCard, CompanyLogo} from '../../components';
+import {CompanyLogo} from '../../components';
 
 import styles from './home.styles';
 
+import CatsIcon from '../../assets/images/menu/felinos.svg';
+import CansIcon from '../../assets/images/menu/caninos.svg';
+import DonationsIcon from '../../assets/images/menu/donaciones.svg';
+import LostPetsIcon from '../../assets/images/menu/perdidos.svg';
+import TipsIcon from '../../assets/images/menu/tips.svg';
+import CalendarIcon from '../../assets/images/menu/tips.svg';
+
 const options = [
-  {screen: 'Pet', label: 'Felinos'},
-  {screen: 'Pet', label: 'Caninos'},
-  {screen: 'Tips', label: 'Tips'},
-  {screen: 'Donations', label: 'Donaciones'},
-  {screen: 'Lost', label: 'Perdidos'},
-  {screen: 'Calendar', label: 'Calendario'},
+  {
+    screen: 'Pet',
+    label: 'Felinos',
+    component: CatsIcon,
+  },
+  {
+    screen: 'Pet',
+    label: 'Caninos',
+    component: CansIcon,
+  },
+  {
+    screen: 'Tips',
+    label: 'Tips',
+    component: TipsIcon,
+  },
+  {
+    screen: 'Donations',
+    label: 'Donaciones',
+    component: DonationsIcon,
+  },
+  {
+    screen: 'Lost',
+    label: 'Perdidos',
+    component: LostPetsIcon,
+  },
+  {
+    screen: 'Calendar',
+    label: 'Calendario',
+    component: CalendarIcon,
+  },
 ];
 
 const Home = ({navigation}) => {
@@ -21,19 +52,14 @@ const Home = ({navigation}) => {
     <SafeAreaView style={styles.wrapper}>
       <CompanyLogo style={styles.companyLogo} size={130} />
       <View style={styles.optionsContainer}>
-        <FlatList
-          style={styles.optionsList}
-          numColumns={2}
-          data={options}
-          renderItem={({item}) => (
-            <OptionCard
-              onPress={() => handleOptionPress(item.screen)}
-              style={styles.optionCard}
-              title={item.label.toUpperCase()}
-            />
-          )}
-          keyExtractor={(_, index) => index}
-        />
+        {options.map((option, index) => (
+          <TouchableOpacity
+            onPress={() => handleOptionPress(option.screen)}
+            style={styles.menuElement}
+            key={index}>
+            {React.createElement(option.component)}
+          </TouchableOpacity>
+        ))}
       </View>
     </SafeAreaView>
   );
