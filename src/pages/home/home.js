@@ -63,6 +63,7 @@ const Home = ({navigation}) => {
           <View key={`row-${index}`} style={styles.optionsRow}>
             {row.map((option, itemIndex) => (
               <TouchableOpacity
+                activeOpacity={0.6}
                 onPress={() => handleOptionPress(option.screen)}
                 style={styles.option}
                 key={itemIndex}>
