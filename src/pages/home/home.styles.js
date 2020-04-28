@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../services/ui';
 import styles from '../../styles';
 
 export default StyleSheet.create({
@@ -11,7 +12,7 @@ export default StyleSheet.create({
   },
   optionsContainer: {
     ...styles.flexOne,
-    ...styles.bgPrimary,
+    backgroundColor: colors.primary.withAlpha(0.55).toString(),
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingTop: 10,

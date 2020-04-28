@@ -1,16 +1,17 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../services/ui';
 
 const baseFont = {
   title: {
     fontFamily: 'Nunito-Bold',
     marginBottom: 10,
-    color: '#3F0606',
+    color: colors.brown.toString(),
   },
   text: {
     fontFamily: 'OpenSans-Regular',
     fontSize: 16,
     marginBottom: 7,
-    color: '#3F0606',
+    color: colors.brown.toString(),
   },
 };
 

@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../../services/ui';
 import styles from '../../../styles';
 
 export default StyleSheet.create({
@@ -8,7 +9,7 @@ export default StyleSheet.create({
     marginHorizontal: 10,
     marginBottom: 20,
     borderRadius: 20,
-    backgroundColor: 'rgba(255, 219, 18, 0.5)',
+    backgroundColor: colors.primary.withAlpha(0.5).toString(),
   },
   tipIndex: {
     fontSize: 35,
