@@ -52,4 +52,10 @@ export default StyleSheet.create({
   textCenter: {
     textAlign: 'center',
   },
+  marginText: {
+    marginTop: 20,
+    marginBottom: 20,
+    marginRight: 8,
+    marginLeft: 8,
+  },
 });
