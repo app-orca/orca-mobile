@@ -20,7 +20,11 @@ const MainStackNavigator = () => (
     <Stack.Screen name="Tips" component={Tips} options={{headerShown: false}} />
     <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
     <Stack.Screen name="Calendar" component={Calendar} />
-    <Stack.Screen name="Information" component={Information} />
+    <Stack.Screen
+      name="Information"
+      component={Information}
+      options={{headerShown: false}}
+    />
     <Stack.Screen
       name="Donations"
       component={Donations}
