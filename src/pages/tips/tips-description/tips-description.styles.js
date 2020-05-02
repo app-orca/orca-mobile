@@ -3,6 +3,13 @@ import {colors} from '../../../services/ui';
 import styles from '../../../styles';
 
 export default StyleSheet.create({
+  wrapper: {
+    ...styles.flexOne,
+  },
+  headerImage: {
+    alignSelf: 'center',
+    marginBottom: 20,
+  },
   tipContainer: {
     ...styles.flexRow,
     paddingVertical: 10,
