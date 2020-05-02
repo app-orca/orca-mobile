@@ -16,7 +16,10 @@ const optionsImages = {
 const TipsMenu = ({options, onOptionPress}) => (
   <View style={styles.optionsWrapper}>
     {options.map((option, index) => (
-      <TouchableOpacity style={styles.optionCard} key={index}>
+      <TouchableOpacity
+        onPress={() => onOptionPress(option.value)}
+        style={styles.optionCard}
+        key={index}>
         <View style={styles.imageContainer}>
           {React.createElement(optionsImages[option.value], {
             style: styles.optionCardImage,
