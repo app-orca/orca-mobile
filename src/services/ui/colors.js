@@ -8,4 +8,5 @@ export default {
   purpleLight: Color.RGBA(137, 133, 242),
   brown: Color.RGBA(63, 6, 6),
   brownLight: Color.RGBA(188, 96, 34),
+  crimson: Color.RGBA(255, 82, 41),
 };
