@@ -8,10 +8,11 @@ export default StyleSheet.create({
     ...styles.centerItems,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 100,
+    borderRadius: 10,
   },
   buttonText: {
-    ...styles.bold,
-    fontSize: 16,
+    ...styles.black,
+    letterSpacing: 1.5,
+    fontSize: 18,
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, FlatList, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import {Text} from '../../../components';
 
 import styles from './donations-menu.styles';
