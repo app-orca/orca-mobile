@@ -10,15 +10,6 @@ import PiggyBankDonationHeader from '../../../assets/images/donations/donate-pig
 import SponsorDonationHeader from '../../../assets/images/donations/donate-sponsor.svg';
 import CompanyDonationHeader from '../../../assets/images/donations/donate-company.svg';
 
-/*
-<DescriptionCard
-  onPress={onOptionPress}
-  style={styles.descriptionCard}
-  label={item.label.toUpperCase()}
-  value={item.value}
-/>
-*/
-
 const DONATION_HEADERS = {
   ALCANCIA: PiggyBankDonationHeader,
   PADRINO: SponsorDonationHeader,
