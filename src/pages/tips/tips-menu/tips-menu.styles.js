@@ -12,7 +12,7 @@ export default StyleSheet.create({
     ...styles.flexRow,
     ...styles.alignItemsCenter,
     ...styles.justifyEnd,
-    paddingVertical: 80,
+    paddingVertical: 70,
     paddingHorizontal: 30,
     overflow: 'hidden',
     backgroundColor: colors.primary.withAlpha(0.5).toString(),
