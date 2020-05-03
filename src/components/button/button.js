@@ -4,10 +4,16 @@ import {TouchableOpacity, Text, ViewPropTypes} from 'react-native';
 import styles from './button.styles';
 import propTypes from 'prop-types';
 
-const Button = ({label, children, style, onPress}) => (
+const Button = ({label, children, style, onPress, textColor}) => (
   // TODO: Finish implementation of button
   <TouchableOpacity {...{onPress}} style={[styles.buttonContainer, style]}>
-    {label ? <Text style={styles.buttonText}>{label}</Text> : children}
+    {label ? (
+      <Text style={[styles.buttonText, {color: textColor}]}>
+        {label.toUpperCase()}
+      </Text>
+    ) : (
+      children
+    )}
   </TouchableOpacity>
 );
 

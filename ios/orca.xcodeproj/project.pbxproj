@@ -24,6 +24,7 @@
 		400B9AC6F0894140BBD960B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0278B71C072A452F9CA6A979 /* OpenSans-Bold.ttf */; };
 		AC6BAD9516904EAD8737EF0D /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D6B531B72E6409BA3A78B63 /* OpenSans-Light.ttf */; };
 		EBA5847DD37F4DA9B42B3978 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAE776196052420CA07D210F /* OpenSans-Regular.ttf */; };
+		E9C7FB8C0E44493CAC5B254A /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6353CB9C2C30493186399EC4 /* Nunito-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		0278B71C072A452F9CA6A979 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../src/assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4D6B531B72E6409BA3A78B63 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; name = "OpenSans-Light.ttf"; path = "../src/assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AAE776196052420CA07D210F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../src/assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6353CB9C2C30493186399EC4 /* Nunito-Black.ttf */ = {isa = PBXFileReference; name = "Nunito-Black.ttf"; path = "../src/assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				0278B71C072A452F9CA6A979 /* OpenSans-Bold.ttf */,
 				4D6B531B72E6409BA3A78B63 /* OpenSans-Light.ttf */,
 				AAE776196052420CA07D210F /* OpenSans-Regular.ttf */,
+				6353CB9C2C30493186399EC4 /* Nunito-Black.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				400B9AC6F0894140BBD960B8 /* OpenSans-Bold.ttf in Resources */,
 				AC6BAD9516904EAD8737EF0D /* OpenSans-Light.ttf in Resources */,
 				EBA5847DD37F4DA9B42B3978 /* OpenSans-Regular.ttf in Resources */,
+				E9C7FB8C0E44493CAC5B254A /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
