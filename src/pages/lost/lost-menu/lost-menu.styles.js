@@ -1,32 +1,27 @@
 import {StyleSheet} from 'react-native';
-
-import styles from '../../../styles';
 import {colors} from '../../../services/ui';
+import styles from '../../../styles';
 
 export default StyleSheet.create({
-  content: {
+  wrapper: {
     ...styles.flexOne,
   },
-  descriptionCard: {
-    ...styles.justifyCenter,
-    ...styles.alignItemsEnd,
-    backgroundColor: colors.primary.withAlpha(0.5).toString(),
-    flex: 1,
-    paddingHorizontal: 30,
-    borderRadius: 30,
-    marginHorizontal: 30,
-    marginBottom: 20,
-    overflow: 'hidden',
+  optionsContainer: {
+    ...styles.flexOne,
+    ...styles.alignItemsStretch,
+    backgroundColor: colors.primary.withAlpha(0.55).toString(),
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
   },
-  descriptionImageContainer: {
-    ...StyleSheet.absoluteFillObject,
+  optionsRow: {
+    ...styles.flexRow,
+    ...styles.justifyAround,
+    ...styles.flexOne,
   },
-  descriptionImage: {
-    transform: [{translateX: -40}, {scale: 1.6}],
-  },
-  descriptionText: {
-    letterSpacing: 2.2,
-    width: '70%',
-    textAlign: 'right',
+  option: {
+    ...styles.flexOne,
+    ...styles.centerItems,
+    margin: 10,
   },
 });
+
