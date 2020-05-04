@@ -8,8 +8,8 @@ import LostDescription from './lost-description/lost-description';
 import styles from './lost.styles';
 
 const lostOptions = [
-  {label: 'Plan alcancía', value: 'ALCANCIA'},
-  {label: 'Plan padrino', value: 'PADRINO'},
+  {label: 'Perdido 1', value: 'p1'},
+  {label: 'Perdido 2', value: 'p2'},
 ];
 
 const Lost = ({navigation}) => {
