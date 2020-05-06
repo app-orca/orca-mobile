@@ -1,30 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Text, SafeAreaView, ScrollView} from 'react-native';
 
 import styles from './information.styles';
-import {Socialmedia, HeaderNav} from '../../components';
+import {SocialMedia, HeaderNav} from '../../components';
 
 const Information = ({navigation}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [screenTitle, setScreenTitle] = useState('¿Quienes somos?');
   const handleGoHomePress = () => navigation.popToTop();
-  const handleGoBackPress =
-    currentIndex <= 0
-      ? null
-      : () => {
-          if (currentIndex - 1 === 0) {
-            setScreenTitle('Tips');
-          }
 
-          setCurrentIndex(currentIndex - 1);
-        };
   return (
     <SafeAreaView style={styles.container}>
-      <HeaderNav
-        title={screenTitle}
-        onBackPress={handleGoBackPress}
-        onGoHomePress={handleGoHomePress}
-      />
+      <HeaderNav title={'¿Quienes Somos?'} onGoHomePress={handleGoHomePress} />
       <ScrollView style={styles.containertext}>
         <Text style={styles.texto}>
           O.R.C.A. es la Organización por el Respeto y el Cuidado de los
@@ -62,7 +47,7 @@ const Information = ({navigation}) => {
           estamos vigilados y podemos expedir CERTIFICADOS DE DONACIÓN.
         </Text>
       </ScrollView>
-      <Socialmedia />
+      <SocialMedia />
     </SafeAreaView>
   );
 };
