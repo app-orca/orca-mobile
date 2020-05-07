@@ -8,8 +8,28 @@ import PetDescription from './pet-description/pet-description';
 import styles from './pet.styles';
 
 const petOptions = [
-  {label: 'Mascota 1', value: 'm1'},
-  {label: 'Mascota 2', value: 'm2'},
+  {
+    name: 'Mascota 1',
+    description: 'soy un gato',
+    age: 2,
+    breed: 'gato :v',
+    gender: 'macho',
+    type: 'gato',
+    leukemia: 'negativo',
+    sida: 'negativo',
+    id: 'm1',
+  },
+  {
+    name: 'Mascota 2',
+    description: 'soy un perro',
+    age: 2,
+    breed: 'perro :v',
+    gender: 'hembra',
+    type: 'perro',
+    leukemia: 'negativo',
+    sida: 'negativo',
+    id: 'm2',
+  },
 ];
 
 const Pet = ({navigation}) => {
@@ -20,8 +40,8 @@ const Pet = ({navigation}) => {
 
   const handleGoBack = () => setCurrentIndex(currentIndex - 1);
 
-  const handleOptionPress = value => {
-    setSelectedPet(petOptions.find(pet => pet.value === value));
+  const handleOptionPress = id => {
+    setSelectedPet(petOptions.find(pet => pet.id === id));
     setCurrentIndex(1);
   };
 
