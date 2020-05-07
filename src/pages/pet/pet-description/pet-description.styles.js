@@ -8,4 +8,8 @@ export default StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
+  descriptionTitle: {
+    ...styles.textCenter,
+    marginVertical: 20,
+  },
 });

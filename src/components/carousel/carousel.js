@@ -6,16 +6,15 @@ import {
   SafeAreaView,
   TouchableHighlight,
 } from 'react-native';
+import {Carousel as ReactNativeCarousel} from 'react-native-snap-carousel';
 
-import styles from './stepper-view.styles';
+import styles from './carousel.styles';
 import propTypes from 'prop-types';
 
-import Carousel from 'react-native-snap-carousel';
+import RightArrow from '../../assets/images/carousel/flecha-der.png';
+import LeftArrow from '../../assets/images/carousel/flecha-izq.png';
 
-import RightArrow from '../../assets/images/slider/flecha-der.png';
-import LeftArrow from '../../assets/images/slider/flecha-izq.png';
-
-export default class Slider extends React.Component {
+export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +39,7 @@ export default class Slider extends React.Component {
           <Image source={require(LeftArrow)} />
         </TouchableHighlight>
         <View>
-          <Carousel
+          <ReactNativeCarousel
             ref={ref => (this.carousel = ref)}
             data={this.state.carouselItems}
             sliderWidth={250}

@@ -6,3 +6,4 @@ export {default as Text} from './text/text';
 export {default as HeaderNav} from './header-nav/header-nav';
 export {default as StepperView} from './stepper-view/stepper-view';
 export {default as CompanyLogo} from './company-logo/company-logo';
+export {default as Carousel} from './carousel/carousel';
