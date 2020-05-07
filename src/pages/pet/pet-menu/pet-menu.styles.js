@@ -41,7 +41,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
   petButton: {
-    ...styles.bgLightPurpe,
+    ...styles.bgLightPurple,
     marginVertical: 10,
     alignSelf: 'center',
     borderRadius: 30,

@@ -29,19 +29,19 @@ const PetMenu = ({options, onOptionPress}) => (
             </View>
             <View style={styles.descriptionTextContainer}>
               <Text style={styles.descriptionText}>
-                <Text style={styles.title}>{item.name.toUpperCase()}: </Text>
+                <Text bold>{item.name.toUpperCase()}: </Text>
                 <Text>Rescatado</Text>
               </Text>
               <Text style={styles.descriptionText}>
-                <Text style={styles.title}>Edad: </Text>
+                <Text bold>Edad: </Text>
                 <Text>{item.age}</Text>
               </Text>
               <Text style={styles.descriptionText}>
-                <Text style={styles.title}>Raza: </Text>
+                <Text bold>Raza: </Text>
                 <Text>{item.breed}</Text>
               </Text>
               <Text style={styles.descriptionText}>
-                <Text style={styles.title}>Sexo: </Text>
+                <Text bold>Sexo: </Text>
                 <Text>{item.gender}</Text>
               </Text>
               <TouchableOpacity>
