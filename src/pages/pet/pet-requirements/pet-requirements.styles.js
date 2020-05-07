@@ -1,49 +1,49 @@
 import {StyleSheet} from 'react-native';
-
 import styles from '../../../styles';
-import {colors} from '../../../services/ui';
 
 export default StyleSheet.create({
-  content: {
+  container: {
     ...styles.flexOne,
   },
-  descriptionCard: {
-    ...styles.justifyCenter,
-    ...styles.alignItemsEnd,
-    backgroundColor: colors.primary.withAlpha(0.5).toString(),
-    flex: 1,
-    paddingHorizontal: 30,
-    borderRadius: 30,
-    marginHorizontal: 30,
-    marginBottom: 20,
-    overflow: 'hidden',
+  numeros: {
+    ...styles.title,
+    ...styles.h1,
+    color: '#ff85a8',
+    fontSize: 60,
+    ...styles.numberMargin,
   },
-  descriptionImageContainer: {
-    ...StyleSheet.absoluteFillObject,
-  },
-  descriptionImage: {
-    width: 140,
-    height: 220,
-    resizeMode: 'cover',
-    transform: [{translateX: 0}, {scale: 1.2}],
-  },
-  descriptionTextContainer: {
-    ...styles.flexOne,
-    paddingHorizontal: 5,
-    paddingVertical: 20,
-    marginLeft: 140,
-  },
-  descriptionText: {
-    letterSpacing: 1,
-    textAlign: 'left',
-  },
-  title: {
-    fontWeight: 'bold',
-  },
-  petButton: {
-    ...styles.bgLightPurpe,
-    marginVertical: 10,
+  logo: {
     alignSelf: 'center',
-    borderRadius: 30,
+    marginBottom: 15,
+    marginTop: 15,
+  },
+
+  pataizquierda: {
+    justifyContent: 'flex-start',
+    ...styles.flexOne,
+    flexDirection: 'row',
+  },
+  pataderecha: {
+    justifyContent: 'flex-end',
+    ...styles.flexOne,
+    flexDirection: 'row',
+  },
+  textoderecha: {
+    textAlign: 'right',
+    ...styles.text,
+    marginLeft: 40,
+    marginTop: 15,
+    marginBottom: 15,
+  },
+  textoizquierda: {
+    marginRight: 40,
+    ...styles.text,
+    marginTop: 15,
+    marginBottom: 15,
+  },
+  botonadopta: {
+    alignSelf: 'center',
+    marginTop: 15,
+    marginBottom: 15,
   },
 });
