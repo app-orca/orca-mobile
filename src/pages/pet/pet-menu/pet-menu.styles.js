@@ -22,16 +22,27 @@ export default StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
   },
   descriptionImage: {
-    height: '100%',
+    width: 140,
+    height: 220,
+    resizeMode: 'cover',
+    transform: [{translateX: 0}, {scale: 1.2}],
+  },
+  descriptionTextContainer: {
+    ...styles.flexOne,
+    paddingHorizontal: 5,
+    paddingVertical: 20,
+    marginLeft: 140,
   },
   descriptionText: {
-    letterSpacing: 2.2,
-    width: '70%',
-    textAlign: 'right',
+    letterSpacing: 1,
+    textAlign: 'left',
+  },
+  title: {
+    fontWeight: 'bold',
   },
   petButton: {
     ...styles.bgLightPurpe,
-    marginVertical: 15,
+    marginVertical: 10,
     alignSelf: 'center',
     borderRadius: 30,
   },

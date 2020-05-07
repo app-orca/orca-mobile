@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, Image} from 'react-native';
+import {View, TouchableOpacity, Image, FlatList} from 'react-native';
 import {Text, Button} from '../../../components';
 
 import styles from './pet-menu.styles';
@@ -15,33 +15,57 @@ const petImg = {
 
 const PetMenu = ({options, onOptionPress}) => (
   <View style={styles.content}>
-    {options.map((option, index) => (
-      <View key={'${index}'} style={styles.descriptionCard}>
-        <View style={styles.descriptionImageContainer}>
-          <Image
-            source={petImg[option.value]}
-            style={styles.descriptionImage}
-          />
-        </View>
-        <Text style={styles.descriptionText}>{option.label.toUpperCase()}</Text>
-        <TouchableOpacity>
-          <Button
-            onPress={() => onOptionPress(option.value)}
-            style={styles.petButton}
-            label="Ver más"
-            textColor="white"
-          />
-        </TouchableOpacity>
-      </View>
-    ))}
+    <FlatList
+      data={options}
+      renderItem={({item, index}) =>
+        item == null ? (
+          <View style={styles.descriptionImageContainer}>
+            <Image source={petImg[item.id]} style={styles.descriptionImage} />
+          </View>
+        ) : (
+          <View style={styles.descriptionCard} key={index}>
+            <View style={styles.descriptionImageContainer}>
+              <Image source={petImg[item.id]} style={styles.descriptionImage} />
+            </View>
+            <View style={styles.descriptionTextContainer}>
+              <Text style={styles.descriptionText}>
+                <Text style={styles.title}>{item.name.toUpperCase()}: </Text>
+                <Text>Rescatado</Text>
+              </Text>
+              <Text style={styles.descriptionText}>
+                <Text style={styles.title}>Edad: </Text>
+                <Text>{item.age}</Text>
+              </Text>
+              <Text style={styles.descriptionText}>
+                <Text style={styles.title}>Raza: </Text>
+                <Text>{item.breed}</Text>
+              </Text>
+              <Text style={styles.descriptionText}>
+                <Text style={styles.title}>Sexo: </Text>
+                <Text>{item.gender}</Text>
+              </Text>
+              <TouchableOpacity>
+                <Button
+                  onPress={() => onOptionPress(item.id)}
+                  style={styles.petButton}
+                  label="Ver más"
+                  textColor="white"
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
+        )
+      }
+      keyExtractor={(_, index) => `${index}`}
+    />
   </View>
 );
 
 PetMenu.propTypes = {
   options: propTypes.arrayOf(
     propTypes.shape({
-      label: propTypes.string.isRequired,
-      value: propTypes.string.isRequired,
+      name: propTypes.string.isRequired,
+      id: propTypes.string.isRequired,
     }),
   ).isRequired,
   onOptionPress: propTypes.func,
