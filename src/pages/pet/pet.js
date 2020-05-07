@@ -9,7 +9,7 @@ import styles from './pet.styles';
 
 const petOptions = [
   {
-    name: 'Mascota 1',
+    name: 'Tussy',
     description: 'soy un gato',
     age: 2,
     breed: 'gato :v',
@@ -20,7 +20,7 @@ const petOptions = [
     id: 'm1',
   },
   {
-    name: 'Mascota 2',
+    name: 'Pacho',
     description: 'soy un perro',
     age: 2,
     breed: 'perro :v',
