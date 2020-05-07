@@ -1,22 +1,64 @@
 import React from 'react';
-import {View, ScrollView} from 'react-native';
-import {Text, Button, Slider} from '../../../components';
+import {View, Image} from 'react-native';
+import {Text, Button} from '../../../components';
+import Swiper from 'react-native-swiper';
 
 import styles from './pet-description.styles';
 import propTypes from 'prop-types';
 
-const petCarousel = [
-  '../../../assets/images/pets/tussy-interno-1.png',
-  '../../../assets/images/pets/tussy-interno-2.png',
-];
+import RightArrow from '../../../assets/images/flecha-der.png';
+import LeftArrow from '../../../assets/images/flecha-izq.png';
 
-const PetDescription = ({pet, onPetPress}) => (
-  <View style={styles.wrapper}>
-    <Text style={styles.descriptionTitle} h2>
-      {pet.name}
-    </Text>
-  </View>
-);
+import img1 from '../../../assets/images/pets/x.jpg';
+import img2 from '../../../assets/images/pets/tussy-interno-2.png';
+
+const PetDescription = ({pet, onPetPress}) => {
+  return (
+    <View style={styles.wrapper}>
+      <View style={styles.swiperContainer}>
+        <Swiper loop showsButtons>
+          <View>
+            <Image source={img1} style={styles.image} />
+          </View>
+          <View>
+            <Image source={img2} style={styles.image} />
+          </View>
+        </Swiper>
+      </View>
+      <View style={styles.descriptionTextContainer}>
+        <Text style={styles.descriptionText}>
+          <Text bold>{pet.name.toUpperCase()}</Text>
+        </Text>
+        <Text style={styles.descriptionText}>
+          <Text>{pet.description}</Text>
+        </Text>
+        <Text style={styles.descriptionText}>
+          <Text bold>Edad: </Text>
+          <Text>{pet.age}</Text>
+        </Text>
+        <Text style={styles.descriptionText}>
+          <Text bold>Raza: </Text>
+          <Text>{pet.breed}</Text>
+        </Text>
+        <Text style={styles.descriptionText}>
+          <Text bold>Sexo: </Text>
+          <Text>{pet.gender}</Text>
+        </Text>
+      </View>
+      <Button
+        style={styles.requirementsButton}
+        label="Requisitos"
+        textColor="white"
+      />
+      <Button
+        onPress={onPetPress}
+        style={styles.adoptButton}
+        label="Adoptar"
+        textColor="white"
+      />
+    </View>
+  );
+};
 
 PetDescription.propTypes = {
   pet: propTypes.shape({
