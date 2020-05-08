@@ -13,6 +13,10 @@ const baseFont = {
     marginBottom: 7,
     color: colors.brown.toString(),
   },
+  black: {
+    fontFamily: 'Nunito-Black',
+    color: colors.brown.toString(),
+  },
 };
 
 export default StyleSheet.create({
@@ -38,6 +42,9 @@ export default StyleSheet.create({
   text: {
     ...baseFont.text,
     marginBottom: 0,
+  },
+  black: {
+    ...baseFont.black,
   },
   bold: {
     ...baseFont.title,

@@ -10,15 +10,20 @@ export default StyleSheet.create({
   },
   descriptionTitle: {
     ...styles.textCenter,
+    marginVertical: 20,
+  },
+  descriptionText: {
+    textAlign: 'justify',
+    marginBottom: 30,
   },
   descriptionContainer: {
     ...styles.flexOne,
     ...styles.bgLightCornFlower,
     borderRadius: 40,
     paddingHorizontal: 30,
-    paddingTop: 20,
   },
   donateButton: {
+    ...styles.bgLightPurpe,
     marginVertical: 15,
     alignSelf: 'center',
   },

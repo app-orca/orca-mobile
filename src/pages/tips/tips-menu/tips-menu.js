@@ -1,20 +1,34 @@
 import React from 'react';
-import {View} from 'react-native';
-import {DescriptionCard} from '../../../components';
+import {View, TouchableOpacity} from 'react-native';
+import {Text} from '../../../components';
 
 import styles from './tips-menu.styles';
 import propTypes from 'prop-types';
 
+import DogTipsHeader from '../../../assets/images/dogs-tips-header.svg';
+import CatTipsHeader from '../../../assets/images/cats-tips-header.svg';
+
+const optionsImages = {
+  FEL: CatTipsHeader,
+  CAN: DogTipsHeader,
+};
+
 const TipsMenu = ({options, onOptionPress}) => (
-  <View>
-    {options.map(option => (
-      <DescriptionCard
-        onPress={onOptionPress}
+  <View style={styles.optionsWrapper}>
+    {options.map((option, index) => (
+      <TouchableOpacity
+        onPress={() => onOptionPress(option.value)}
         style={styles.optionCard}
-        key={option.value}
-        label={option.label}
-        value={option.value}
-      />
+        key={index}>
+        <View style={styles.imageContainer}>
+          {React.createElement(optionsImages[option.value], {
+            style: styles.optionCardImage,
+            height: '100%',
+            width: '65%',
+          })}
+        </View>
+        <Text style={styles.cardText}>{option.label.toUpperCase()}</Text>
+      </TouchableOpacity>
     ))}
   </View>
 );

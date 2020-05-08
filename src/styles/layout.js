@@ -31,6 +31,12 @@ export default StyleSheet.create({
   alignItemsStretch: {
     alignItems: 'stretch',
   },
+  alignItemsEnd: {
+    alignItems: 'flex-end',
+  },
+  alignItemsStart: {
+    alignItems: 'center',
+  },
   centerItems: {
     justifyContent: 'center',
     alignItems: 'center',

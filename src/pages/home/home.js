@@ -1,22 +1,60 @@
 import React from 'react';
 import {View, FlatList, TouchableOpacity} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {OptionCard, CompanyLogo} from '../../components';
+import {CompanyLogo} from '../../components';
 
 import styles from './home.styles';
 
+import CatsIcon from '../../assets/images/menu/felinos.svg';
+import CansIcon from '../../assets/images/menu/caninos.svg';
+import DonationsIcon from '../../assets/images/menu/donaciones.svg';
+import LostPetsIcon from '../../assets/images/menu/perdidos.svg';
+import TipsIcon from '../../assets/images/menu/tips.svg';
+import CalendarIcon from '../../assets/images/menu/tips.svg';
+
 const options = [
-  {screen: 'Pet', label: 'Felinos'},
-  {screen: 'Pet', label: 'Caninos'},
-  {screen: 'Tips', label: 'Tips'},
-  {screen: 'Donations', label: 'Donaciones'},
-  {screen: 'Lost', label: 'Perdidos'},
-  {screen: 'Calendar', label: 'Calendario'},
+  {
+    screen: 'Pet',
+    label: 'Felinos',
+    component: CatsIcon,
+  },
+  {
+    screen: 'Pet',
+    label: 'Caninos',
+    component: CansIcon,
+  },
+  {
+    screen: 'Tips',
+    label: 'Tips',
+    component: TipsIcon,
+  },
+  {
+    screen: 'Donations',
+    label: 'Donaciones',
+    component: DonationsIcon,
+  },
+  {
+    screen: 'Lost',
+    label: 'Perdidos',
+    component: LostPetsIcon,
+  },
+  {
+    screen: 'Calendar',
+    label: 'Calendario',
+    component: CalendarIcon,
+  },
 ];
 
 const Home = ({navigation}) => {
   const handleOptionPress = screen => navigation.navigate(screen);
   const onClick = () => navigation.navigate('Information');
+
+  let optionsRows = [...options];
+
+  optionsRows = Array.from(
+    {length: Math.ceil(optionsRows.length / 2)},
+    (v, i) => optionsRows.slice(i * 2, i * 2 + 2),
+  );
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -24,19 +62,21 @@ const Home = ({navigation}) => {
         <CompanyLogo style={styles.companyLogo} size={130} />
       </TouchableOpacity>
       <View style={styles.optionsContainer}>
-        <FlatList
-          style={styles.optionsList}
-          numColumns={2}
-          data={options}
-          renderItem={({item}) => (
-            <OptionCard
-              onPress={() => handleOptionPress(item.screen)}
-              style={styles.optionCard}
-              title={item.label.toUpperCase()}
-            />
-          )}
-          keyExtractor={(_, index) => index}
-        />
+        {optionsRows.map((row, index) => (
+          <View key={`row-${index}`} style={styles.optionsRow}>
+            {row.map((option, itemIndex) => (
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => handleOptionPress(option.screen)}
+                style={styles.option}
+                key={itemIndex}>
+                {React.createElement(option.component, {
+                  height: '100%',
+                })}
+              </TouchableOpacity>
+            ))}
+          </View>
+        ))}
       </View>
     </SafeAreaView>
   );
