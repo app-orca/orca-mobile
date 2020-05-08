@@ -1,7 +1,7 @@
 import React from 'react';
-import {ScrollView, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {HeaderNav, Text, Button, SocialMedia} from 'components';
+import {HeaderNav, StepperView} from 'components';
+import CalendarMenu from './calendar-menu/calendar-menu';
 
 import styles from './calendar.styles';
 
@@ -50,39 +50,9 @@ const Calendar = ({navigation}) => {
     <SafeAreaView style={styles.wrapper}>
       <HeaderNav onLogoPress={handleLogoPress} title="Calendario" />
       <CalendarHeader style={styles.calendarHeader} height="28%" />
-      <ScrollView style={styles.eventsContainer}>
-        <Text style={styles.calendarMonthText} black>
-          {MOCKED_EVENTS.month.toUpperCase()}
-        </Text>
-        {MOCKED_EVENTS.events.map((item, index) => (
-          <View
-            style={[
-              styles.eventContainer,
-              index % 2 && styles.eventContainerInverse,
-            ]}
-            key={item.id}>
-            <View
-              style={[
-                styles.eventDescriptionContainer,
-                index % 2
-                  ? styles.eventDescriptionContainerRight
-                  : styles.eventDescriptionContainerLeft,
-              ]}>
-              <Text style={styles.eventDesctiptionText}>{item.title}</Text>
-              <Button
-                label="Ver más"
-                style={styles.showMoreButton}
-                textColor="white"
-                small
-              />
-            </View>
-            <Text style={styles.dayText} black>
-              {item.day}
-            </Text>
-          </View>
-        ))}
-        <SocialMedia />
-      </ScrollView>
+      <StepperView>
+        <CalendarMenu calendarData={MOCKED_EVENTS} />
+      </StepperView>
     </SafeAreaView>
   );
 };
