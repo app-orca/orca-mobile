@@ -5,40 +5,47 @@ import {Text, Button, SocialMedia} from 'components';
 import styles from './calendar-menu.styles';
 import propTypes from 'prop-types';
 
+import CalendarHeader from 'assets/images/calendar-header.svg';
+
 const CalendarMenu = ({calendarData, onItemPress}) => (
   <ScrollView style={styles.eventsContainer}>
+    <CalendarHeader width="70%" style={styles.headerImage} />
+
     <Text style={styles.calendarMonthText} black>
       {calendarData.month.toUpperCase()}
     </Text>
-    {calendarData.events.map((item, index) => (
-      <View
-        style={[
-          styles.eventContainer,
-          index % 2 && styles.eventContainerInverse,
-        ]}
-        key={item.id}>
+
+    <View style={styles.container}>
+      {calendarData.events.map((item, index) => (
         <View
           style={[
-            styles.eventDescriptionContainer,
-            index % 2
-              ? styles.eventDescriptionContainerRight
-              : styles.eventDescriptionContainerLeft,
-          ]}>
-          <Text style={styles.eventDesctiptionText}>{item.title}</Text>
-          <Button
-            label="Ver más"
-            style={styles.showMoreButton}
-            onPress={() => onItemPress(item.id)}
-            textColor="white"
-            small
-          />
+            styles.eventContainer,
+            index % 2 && styles.eventContainerInverse,
+          ]}
+          key={item.id}>
+          <View
+            style={[
+              styles.eventDescriptionContainer,
+              index % 2
+                ? styles.eventDescriptionContainerRight
+                : styles.eventDescriptionContainerLeft,
+            ]}>
+            <Text style={styles.eventDesctiptionText}>{item.title}</Text>
+            <Button
+              label="Ver más"
+              style={styles.showMoreButton}
+              onPress={() => onItemPress(item.id)}
+              textColor="white"
+              small
+            />
+          </View>
+          <Text style={styles.dayText} black>
+            {item.day}
+          </Text>
         </View>
-        <Text style={styles.dayText} black>
-          {item.day}
-        </Text>
-      </View>
-    ))}
-    <SocialMedia />
+      ))}
+      <SocialMedia />
+    </View>
   </ScrollView>
 );
 
