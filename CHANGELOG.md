@@ -1,3 +1,6 @@
+### v0.9.0 [9bebb79]
+* (2020-05-07) Added Social Media and info Screen
+
 ### v0.8.0 [ba3743a]
 * (2020-05-02) Implemented design on Home, Description and Tips Screens
 
