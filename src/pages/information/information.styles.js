@@ -21,5 +21,8 @@ export default StyleSheet.create({
     ...styles.text,
     ...styles.textCenter,
     ...styles.marginText,
+    letterSpacing: 1.5,
+    paddingVertical: 20,
+    paddingHorizontal: 30,
   },
 });

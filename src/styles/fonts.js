@@ -6,16 +6,19 @@ const baseFont = {
     fontFamily: 'Nunito-Bold',
     marginBottom: 10,
     color: colors.brown.toString(),
+    letterSpacing: 1.5,
   },
   text: {
     fontFamily: 'OpenSans-Regular',
     fontSize: 16,
     marginBottom: 7,
     color: colors.brown.toString(),
+    letterSpacing: 1.5,
   },
   black: {
     fontFamily: 'Nunito-Black',
     color: colors.brown.toString(),
+    letterSpacing: 1.5,
   },
 };
 

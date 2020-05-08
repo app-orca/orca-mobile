@@ -10,7 +10,7 @@ import CansIcon from 'assets/images/menu/caninos.svg';
 import DonationsIcon from 'assets/images/menu/donaciones.svg';
 import LostPetsIcon from 'assets/images/menu/perdidos.svg';
 import TipsIcon from 'assets/images/menu/tips.svg';
-import CalendarIcon from 'assets/images/menu/tips.svg';
+import CalendarIcon from 'assets/images/menu/calendario.svg';
 
 const options = [
   {

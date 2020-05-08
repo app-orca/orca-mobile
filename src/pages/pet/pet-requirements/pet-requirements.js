@@ -22,7 +22,9 @@ const PetRequirements = () => (
     <ScrollView style={styles.containertext}>
       <Image style={styles.logo} source={PetRequirementsHeader} />
       {PET_REQUIREMENTS_MOCK.map((requirement, index) => (
-        <View style={styles.requirementContainer}>
+        <View
+          key={`pet-requirement-${index}`}
+          style={styles.requirementContainer}>
           <View
             style={[
               styles.legContainer,
