@@ -3,7 +3,7 @@ import fontStyles from '../../styles/fonts';
 /**
  * Represent diferent types of font types in array.
  */
-const fontTypes = ['h1', 'h2', 'h3', 'h4', 'p', 'bold', 'text'];
+const fontTypes = ['h1', 'h2', 'h3', 'h4', 'p', 'bold', 'text', 'black'];
 
 /**
  * Return font styles by the provided props

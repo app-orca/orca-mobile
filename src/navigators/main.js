@@ -8,6 +8,8 @@ import {
   Pet,
   Tips,
   Requeriments,
+  DescriptionPet,
+  Information,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -25,10 +27,16 @@ const MainStackNavigator = () => (
     />
     <Stack.Screen name="Calendar" component={Calendar} />
     <Stack.Screen
+      name="Information"
+      component={Information}
+      options={{headerShown: false}}
+    />
+    <Stack.Screen
       name="Donations"
       component={Donations}
       options={{headerShown: false}}
     />
+    <Stack.Screen name="DescriptionPet" component={DescriptionPet} />
   </Stack.Navigator>
 );
 

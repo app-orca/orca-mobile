@@ -12,17 +12,19 @@ export default StyleSheet.create({
   },
   optionsContainer: {
     ...styles.flexOne,
+    ...styles.alignItemsStretch,
     backgroundColor: colors.primary.withAlpha(0.55).toString(),
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    paddingTop: 10,
-    paddingHorizontal: 10,
   },
-  optionsList: {
+  optionsRow: {
+    ...styles.flexRow,
+    ...styles.justifyAround,
     ...styles.flexOne,
   },
-  optionCard: {
+  option: {
     ...styles.flexOne,
+    ...styles.centerItems,
     margin: 10,
   },
 });
