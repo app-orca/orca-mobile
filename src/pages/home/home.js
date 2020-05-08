@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity} from 'react-native';
+import {View, FlatList, TouchableOpacity} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {CompanyLogo} from '../../components';
 
@@ -47,6 +47,7 @@ const options = [
 
 const Home = ({navigation}) => {
   const handleOptionPress = screen => navigation.navigate(screen);
+  const onClick = () => navigation.navigate('Information');
 
   let optionsRows = [...options];
 
@@ -57,7 +58,9 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.wrapper}>
-      <CompanyLogo style={styles.companyLogo} size={130} />
+      <TouchableOpacity onPress={onClick}>
+        <CompanyLogo style={styles.companyLogo} size={130} />
+      </TouchableOpacity>
       <View style={styles.optionsContainer}>
         {optionsRows.map((row, index) => (
           <View key={`row-${index}`} style={styles.optionsRow}>
