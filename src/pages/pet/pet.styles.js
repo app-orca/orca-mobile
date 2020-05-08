@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
-import styles from '../../styles';
+import styles from 'styles';
 
-export default StyleSheet.create ({
+export default StyleSheet.create({
   descriptionCard: {
     marginHorizontal: 20,
     marginTop: 20,

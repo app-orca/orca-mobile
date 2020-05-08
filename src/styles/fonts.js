@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../services/ui';
+import {colors} from 'services/ui';
 
 const baseFont = {
   title: {
@@ -58,17 +58,5 @@ export default StyleSheet.create({
   },
   textCenter: {
     textAlign: 'center',
-  },
-  numberMargin: {
-    marginTop: 8,
-    marginBottom: 8,
-    marginRight: 20,
-    marginLeft: 20,
-  },
-  marginText: {
-    marginTop: 20,
-    marginBottom: 20,
-    marginRight: 8,
-    marginLeft: 8,
   },
 });

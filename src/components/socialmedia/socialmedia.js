@@ -7,10 +7,10 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import Facebook from '../../assets/images/social-media/redes-facebook.png';
-import Instagram from '../../assets/images/social-media/redes-instagram.png';
-import Mail from '../../assets/images/social-media/redes-mail.png';
-import Web from '../../assets/images/social-media/redes-web.png';
+import Facebook from 'assets/images/social-media/redes-facebook.png';
+import Instagram from 'assets/images/social-media/redes-instagram.png';
+import Mail from 'assets/images/social-media/redes-mail.png';
+import Web from 'assets/images/social-media/redes-web.png';
 
 import styles from './socialmedia.styles';
 

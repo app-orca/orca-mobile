@@ -3,7 +3,7 @@ import {Image, ViewPropTypes} from 'react-native';
 
 import propTypes from 'prop-types';
 
-import Logo from '../../assets/images/logo.png';
+import Logo from 'assets/images/logo.png';
 
 const CompanyLogo = ({size, style}) => (
   <Image
