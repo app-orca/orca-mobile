@@ -1,3 +1,6 @@
+### v0.12.0 [6b3feaf]
+* (2020-05-08) v0.12.0 Added Lost Screen
+
 ### v0.11.0 [3f57b48]
 * (2020-05-07) v0.11.0 Added path resolver babel plugin
 
