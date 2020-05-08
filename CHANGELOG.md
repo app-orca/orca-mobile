@@ -1,3 +1,6 @@
+### v0.10.0 [3924e97]
+* (2020-05-07) Pet Window and minor changes
+
 ### v0.9.0 [9bebb79]
 * (2020-05-07) Added Social Media and info Screen
 
