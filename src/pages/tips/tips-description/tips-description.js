@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
-import {Text} from '../../../components';
+import {Text} from 'components';
 
 import styles from './tips-description.styles';
 import propTypes from 'prop-types';

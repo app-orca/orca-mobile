@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, TouchableOpacity, Image, FlatList} from 'react-native';
-import {Text, Button} from '../../../components';
+import {Text, Button} from 'components';
 
 import styles from './pet-menu.styles';
 import propTypes from 'prop-types';

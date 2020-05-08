@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Image} from 'react-native';
-import {Text, Button} from '../../../components';
+import {Text, Button} from 'components';
 import Swiper from 'react-native-swiper';
 
 import styles from './pet-description.styles';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, TouchableOpacity} from 'react-native';
-import {Text} from '../../../components';
+import {Text} from 'components';
 
 import styles from './tips-menu.styles';
 import propTypes from 'prop-types';

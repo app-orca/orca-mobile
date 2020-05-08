@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, Image, View} from 'react-native';
-import {Text, Button} from '../../../components';
+import {Text, Button} from 'components';
 
 import styles from './pet-requirements.styles';
 

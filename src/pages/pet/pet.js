@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-import {HeaderNav, StepperView} from '../../components';
+import {HeaderNav, StepperView} from 'components';
 import PetMenu from './pet-menu/pet-menu';
 import PetDescription from './pet-description/pet-description';
 import PetRequirements from './pet-requirements/pet-requirements';

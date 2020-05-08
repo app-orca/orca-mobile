@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, Image, View, Text} from 'react-native';
-import {HeaderNav} from '../../components';
+import {HeaderNav} from 'components';
 
 import styles from './requeriments.styles';
 

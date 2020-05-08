@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, ScrollView} from 'react-native';
-import {Text, Button} from '../../../components';
+import {Text, Button} from 'components';
 
 import styles from './donation-description.style';
 import propTypes from 'prop-types';

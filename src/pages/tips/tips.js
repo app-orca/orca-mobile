@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {HeaderNav, StepperView} from '../../components';
+import {HeaderNav, StepperView} from 'components';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import TipsMenu from './tips-menu/tips-menu';
 import TipsDescription from './tips-description/tips-description';
