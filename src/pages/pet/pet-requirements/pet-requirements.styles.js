@@ -1,48 +1,43 @@
 import {StyleSheet} from 'react-native';
-import styles from '../../../styles';
+import styles from 'styles';
+import {colors} from 'services/ui';
 
 export default StyleSheet.create({
   container: {
     ...styles.flexOne,
   },
+  requirementContainer: {
+    marginBottom: 40,
+  },
   numeros: {
     ...styles.title,
     ...styles.h1,
-    color: '#ff85a8',
+    ...styles.flexOne,
+    ...styles.textCenter,
+    color: colors.crimson.withAlpha(0.6).toString(),
     fontSize: 60,
-    ...styles.numberMargin,
     padding: 10,
   },
   logo: {
     alignSelf: 'center',
-    marginBottom: 15,
+    marginBottom: 40,
     marginTop: 15,
   },
-
-  pataizquierda: {
-    justifyContent: 'flex-start',
-    ...styles.flexOne,
-    flexDirection: 'row',
+  legContainer: {
+    ...styles.flexRow,
   },
-  pataderecha: {
-    justifyContent: 'flex-end',
-    ...styles.flexOne,
-    flexDirection: 'row',
+  legContainerInverse: {
+    ...styles.flexRowReverse,
   },
-  textoderecha: {
-    ...styles.text,
+  requirementText: {
+    marginTop: 30,
+    paddingHorizontal: 20,
+    letterSpacing: 2,
+    lineHeight: 30,
+    width: '100%',
+  },
+  requirementTextRight: {
     textAlign: 'right',
-    marginLeft: 40,
-    marginRight: 25,
-    marginTop: 15,
-    marginBottom: 15,
-  },
-  textoizquierda: {
-    ...styles.text,
-    marginLeft: 25,
-    marginRight: 40,
-    marginTop: 15,
-    marginBottom: 15,
   },
   adoptButton: {
     alignSelf: 'center',

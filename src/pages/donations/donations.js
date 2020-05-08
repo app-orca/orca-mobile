@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-import {HeaderNav, StepperView} from '../../components';
+import {HeaderNav, StepperView} from 'components';
 import DonationsMenu from './donations-menu/donations-menu';
 import DonationDescription from './donation-description/donation-description';
 import Donate from './donate/donate';

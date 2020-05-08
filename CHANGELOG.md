@@ -1,3 +1,9 @@
+### v0.11.0 [3f57b48]
+* (2020-05-07) v0.11.0 Added path resolver babel plugin
+
+### v0.10.0 [3924e97]
+* (2020-05-07) Pet Window and minor changes
+
 ### v0.9.0 [9bebb79]
 * (2020-05-07) Added Social Media and info Screen
 

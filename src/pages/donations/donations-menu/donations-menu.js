@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, TouchableOpacity} from 'react-native';
-import {Text} from '../../../components';
+import {Text} from 'components';
 
 import styles from './donations-menu.styles';
 import propTypes from 'prop-types';
 
-import UniqueDonationHeader from '../../../assets/images/donations/donate-unique.svg';
-import PiggyBankDonationHeader from '../../../assets/images/donations/donate-piggy-bank.svg';
-import SponsorDonationHeader from '../../../assets/images/donations/donate-sponsor.svg';
-import CompanyDonationHeader from '../../../assets/images/donations/donate-company.svg';
+import UniqueDonationHeader from 'assets/images/donations/donate-unique.svg';
+import PiggyBankDonationHeader from 'assets/images/donations/donate-piggy-bank.svg';
+import SponsorDonationHeader from 'assets/images/donations/donate-sponsor.svg';
+import CompanyDonationHeader from 'assets/images/donations/donate-company.svg';
 
 const DONATION_HEADERS = {
   ALCANCIA: PiggyBankDonationHeader,

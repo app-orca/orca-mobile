@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, SafeAreaView, ScrollView} from 'react-native';
 
 import styles from './information.styles';
-import {SocialMedia, HeaderNav} from '../../components';
+import {SocialMedia, HeaderNav} from 'components';
 
 const Information = ({navigation}) => {
   const handleGoHomePress = () => navigation.popToTop();
