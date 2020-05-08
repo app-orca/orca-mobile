@@ -13,11 +13,11 @@ const Requeriments = ({navigation}) => {
       <ScrollView style={styles.containertext}>
         <Image
           style={styles.logo}
-          source={require('../../assets/images/requeriments/requisitos-principal.png')}
+          source={require('assets/images/requeriments/requisitos-principal.png')}
         />
         <View style={styles.pataizquierda}>
           <Image
-            source={require('../../assets/images/requeriments/requisitos-pata-izquierda.png')}
+            source={require('assets/images/requeriments/requisitos-pata-izquierda.png')}
           />
           <Text style={styles.numeros}>1</Text>
         </View>
@@ -35,7 +35,7 @@ const Requeriments = ({navigation}) => {
         <View style={styles.pataderecha}>
           <Text style={styles.numeros}>2</Text>
           <Image
-            source={require('../../assets/images/requeriments/requisitos-pata-derecha.png')}
+            source={require('assets/images/requeriments/requisitos-pata-derecha.png')}
           />
         </View>
         <Text style={(styles.pataderecha, styles.textoderecha)}>
@@ -54,7 +54,7 @@ const Requeriments = ({navigation}) => {
         </Text>
         <View style={styles.pataizquierda}>
           <Image
-            source={require('../../assets/images/requeriments/requisitos-pata-izquierda.png')}
+            source={require('assets/images/requeriments/requisitos-pata-izquierda.png')}
           />
           <Text style={styles.numeros}>3</Text>
         </View>
@@ -70,7 +70,7 @@ const Requeriments = ({navigation}) => {
         <View style={styles.pataderecha}>
           <Text style={styles.numeros}>4</Text>
           <Image
-            source={require('../../assets/images/requeriments/requisitos-pata-derecha.png')}
+            source={require('assets/images/requeriments/requisitos-pata-derecha.png')}
           />
         </View>
         <Text style={(styles.pataderecha, styles.textoderecha)}>
@@ -89,7 +89,7 @@ const Requeriments = ({navigation}) => {
         </Text>
         <View style={styles.pataizquierda}>
           <Image
-            source={require('../../assets/images/requeriments/requisitos-pata-izquierda.png')}
+            source={require('assets/images/requeriments/requisitos-pata-izquierda.png')}
           />
           <Text style={styles.numeros}>5</Text>
         </View>
@@ -111,7 +111,7 @@ const Requeriments = ({navigation}) => {
         <View style={styles.pataderecha}>
           <Text style={styles.numeros}>6</Text>
           <Image
-            source={require('../../assets/images/requeriments/requisitos-pata-derecha.png')}
+            source={require('assets/images/requeriments/requisitos-pata-derecha.png')}
           />
         </View>
         <Text style={(styles.pataderecha, styles.textoderecha)}>
@@ -130,7 +130,7 @@ const Requeriments = ({navigation}) => {
       </ScrollView>
       <Image
         style={styles.botonadopta}
-        source={require('../../assets/images/boton-adopta.png')}
+        source={require('assets/images/boton-adopta.png')}
       />
     </SafeAreaView>
   );

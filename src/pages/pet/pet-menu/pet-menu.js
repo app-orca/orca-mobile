@@ -5,8 +5,8 @@ import {Text, Button} from '../../../components';
 import styles from './pet-menu.styles';
 import propTypes from 'prop-types';
 
-import Pet1 from '../../../assets/images/pets/tussy.png';
-import Pet2 from '../../../assets/images/pets/pacho.png';
+import Pet1 from 'assets/images/pets/tussy.png';
+import Pet2 from 'assets/images/pets/pacho.png';
 
 const petImg = {
   m1: Pet1,

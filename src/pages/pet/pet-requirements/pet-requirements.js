@@ -4,9 +4,9 @@ import {Text, Button} from '../../../components';
 
 import styles from './pet-requirements.styles';
 
-import PetRequirementsHeader from '../../../assets/images/requirements/requisitos-principal.png';
-import PetRequirementsRight from '../../../assets/images/requirements/requisitos-pata-derecha.png';
-import PetRequirementsLeft from '../../../assets/images/requirements/requisitos-pata-izquierda.png';
+import PetRequirementsHeader from 'assets/images/requirements/requisitos-principal.png';
+import PetRequirementsRight from 'assets/images/requirements/requisitos-pata-derecha.png';
+import PetRequirementsLeft from 'assets/images/requirements/requisitos-pata-izquierda.png';
 
 const PetRequirements = () => (
   <SafeAreaView style={styles.container}>

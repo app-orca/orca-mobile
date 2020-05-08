@@ -6,11 +6,11 @@ import Swiper from 'react-native-swiper';
 import styles from './pet-description.styles';
 import propTypes from 'prop-types';
 
-import RightArrow from '../../../assets/images/flecha-der.png';
-import LeftArrow from '../../../assets/images/flecha-izq.png';
+import RightArrow from 'assets/images/flecha-der.png';
+import LeftArrow from 'assets/images/flecha-izq.png';
 
-import img1 from '../../../assets/images/pets/tussy-interno-1.png';
-import img2 from '../../../assets/images/pets/tussy-interno-2.png';
+import img1 from 'assets/images/pets/tussy-interno-1.png';
+import img2 from 'assets/images/pets/tussy-interno-2.png';
 
 const PetDescription = ({pet, onPetPress}) => {
   return (

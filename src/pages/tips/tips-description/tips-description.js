@@ -5,8 +5,8 @@ import {Text} from '../../../components';
 import styles from './tips-description.styles';
 import propTypes from 'prop-types';
 
-import DogTipsHeader from '../../../assets/images/dogs-tips-header.svg';
-import CatTipsHeader from '../../../assets/images/cats-tips-header.svg';
+import DogTipsHeader from 'assets/images/dogs-tips-header.svg';
+import CatTipsHeader from 'assets/images/cats-tips-header.svg';
 
 // Tips temporales, son un dummie mientras tenemos servicios
 const MOCKED_TIPS = [

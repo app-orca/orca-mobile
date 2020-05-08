@@ -4,7 +4,7 @@ import {Text, Button} from '../../../components';
 
 import styles from './donate.styles';
 
-import PayULogo from '../../../assets/images/payu-logo.svg';
+import PayULogo from 'assets/images/payu-logo.svg';
 
 const Donate = () => (
   <View style={styles.wrapper}>

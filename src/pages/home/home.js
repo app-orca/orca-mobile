@@ -1,16 +1,16 @@
 import React from 'react';
-import {View, FlatList, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {CompanyLogo} from '../../components';
+import {CompanyLogo} from 'components';
 
 import styles from './home.styles';
 
-import CatsIcon from '../../assets/images/menu/felinos.svg';
-import CansIcon from '../../assets/images/menu/caninos.svg';
-import DonationsIcon from '../../assets/images/menu/donaciones.svg';
-import LostPetsIcon from '../../assets/images/menu/perdidos.svg';
-import TipsIcon from '../../assets/images/menu/tips.svg';
-import CalendarIcon from '../../assets/images/menu/tips.svg';
+import CatsIcon from 'assets/images/menu/felinos.svg';
+import CansIcon from 'assets/images/menu/caninos.svg';
+import DonationsIcon from 'assets/images/menu/donaciones.svg';
+import LostPetsIcon from 'assets/images/menu/perdidos.svg';
+import TipsIcon from 'assets/images/menu/tips.svg';
+import CalendarIcon from 'assets/images/menu/tips.svg';
 
 const options = [
   {
