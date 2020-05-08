@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../services/ui';
+import {colors} from 'services/ui';
 
 export default StyleSheet.create({
   bgPrimary: {
