@@ -6,8 +6,8 @@ const Pet = ({navigation}) => (
   <View>
     <Text>Pet works!</Text>
     <OptionCard
-      title="ver mas"
-      onPress={() => navigation.navigate('DescriptionPet')}
+      onPress={() => navigation.navigate('Requeriments')}
+      title="requerimientos"
     />
   </View>
 );

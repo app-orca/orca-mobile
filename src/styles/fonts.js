@@ -59,6 +59,12 @@ export default StyleSheet.create({
   textCenter: {
     textAlign: 'center',
   },
+  numberMargin: {
+    marginTop: 8,
+    marginBottom: 8,
+    marginRight: 20,
+    marginLeft: 20,
+  },
   marginText: {
     marginTop: 20,
     marginBottom: 20,

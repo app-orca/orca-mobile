@@ -7,6 +7,7 @@ import {
   Lost,
   Pet,
   Tips,
+  Requeriments,
   DescriptionPet,
   Information,
 } from '../pages';
@@ -19,6 +20,11 @@ const MainStackNavigator = () => (
     <Stack.Screen name="Lost" component={Lost} />
     <Stack.Screen name="Tips" component={Tips} options={{headerShown: false}} />
     <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
+    <Stack.Screen
+      name="Requeriments"
+      component={Requeriments}
+      options={{headerShown: false}}
+    />
     <Stack.Screen name="Calendar" component={Calendar} />
     <Stack.Screen
       name="Information"
