@@ -11,6 +11,7 @@ export default StyleSheet.create({
     color: '#ff85a8',
     fontSize: 60,
     ...styles.numberMargin,
+    padding: 10,
   },
   logo: {
     alignSelf: 'center',
@@ -29,19 +30,21 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   textoderecha: {
-    textAlign: 'right',
     ...styles.text,
+    textAlign: 'right',
     marginLeft: 40,
+    marginRight: 25,
     marginTop: 15,
     marginBottom: 15,
   },
   textoizquierda: {
-    marginRight: 40,
     ...styles.text,
+    marginLeft: 25,
+    marginRight: 40,
     marginTop: 15,
     marginBottom: 15,
   },
-  botonadopta: {
+  adoptButton: {
     alignSelf: 'center',
     marginTop: 15,
     marginBottom: 15,

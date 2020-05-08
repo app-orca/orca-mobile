@@ -9,7 +9,7 @@ import propTypes from 'prop-types';
 import RightArrow from '../../../assets/images/flecha-der.png';
 import LeftArrow from '../../../assets/images/flecha-izq.png';
 
-import img1 from '../../../assets/images/pets/x.jpg';
+import img1 from '../../../assets/images/pets/tussy-interno-1.png';
 import img2 from '../../../assets/images/pets/tussy-interno-2.png';
 
 const PetDescription = ({pet, onPetPress}) => {
@@ -46,6 +46,7 @@ const PetDescription = ({pet, onPetPress}) => {
         </Text>
       </View>
       <Button
+        onPress={onPetPress}
         style={styles.requirementsButton}
         label="Requisitos"
         textColor="white"
@@ -53,7 +54,7 @@ const PetDescription = ({pet, onPetPress}) => {
       <Button
         onPress={onPetPress}
         style={styles.adoptButton}
-        label="Adoptar"
+        label="Adopta"
         textColor="white"
       />
     </View>
