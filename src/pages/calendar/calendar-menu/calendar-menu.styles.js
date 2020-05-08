@@ -8,10 +8,9 @@ const OPTIONS_BORDER_RADIUS = 200;
 export default StyleSheet.create({
   eventsContainer: {
     ...styles.flexOne,
-    backgroundColor: colors.primary.withAlpha(0.5).toString(),
-    marginTop: 10,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
+  },
+  headerImage: {
+    alignSelf: 'center',
   },
   calendarMonthText: {
     fontSize: 30,
@@ -57,5 +56,11 @@ export default StyleSheet.create({
     fontSize: 40,
     width: 80,
     textAlign: 'center',
+  },
+  container: {
+    backgroundColor: colors.primary.withAlpha(0.5).toString(),
+    paddingTop: 50,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
   },
 });

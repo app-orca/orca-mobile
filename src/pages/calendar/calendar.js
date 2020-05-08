@@ -6,8 +6,6 @@ import EventDescription from './event-description/event-description';
 
 import styles from './calendar.styles';
 
-import CalendarHeader from 'assets/images/calendar-header.svg';
-
 const MOCKED_EVENTS = {
   month: 'Mayo',
   events: [
@@ -59,7 +57,6 @@ const Calendar = ({navigation}) => {
         onLogoPress={handleLogoPress}
         title="Calendario"
       />
-      <CalendarHeader style={styles.calendarHeader} height="28%" />
       <StepperView {...{currentIndex}}>
         <CalendarMenu
           onItemPress={handleCalendarShowMore}
