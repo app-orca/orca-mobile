@@ -59,7 +59,7 @@ const Calendar = ({navigation}) => {
         onLogoPress={handleLogoPress}
         title="Calendario"
       />
-      <CalendarHeader style={styles.calendarHeader} height="28%" />
+      <CalendarHeader style={styles.calendarHeader} height="18%" />
       <StepperView {...{currentIndex}}>
         <CalendarMenu
           onItemPress={handleCalendarShowMore}

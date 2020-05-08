@@ -32,6 +32,28 @@ const petOptions = [
     sida: 'negativo',
     id: 'm2',
   },
+  {
+    name: 'Pacho',
+    description: 'soy un perro',
+    age: 2,
+    breed: 'perro :v',
+    gender: 'hembra',
+    type: 'perro',
+    leukemia: 'negativo',
+    sida: 'negativo',
+    id: 'm3',
+  },
+  {
+    name: 'Pacho',
+    description: 'soy un perro',
+    age: 2,
+    breed: 'perro :v',
+    gender: 'hembra',
+    type: 'perro',
+    leukemia: 'negativo',
+    sida: 'negativo',
+    id: 'm4',
+  },
 ];
 
 const Pet = ({navigation}) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, Image, FlatList} from 'react-native';
+import {View, Image, FlatList} from 'react-native';
 import {Text, Button} from 'components';
 
 import styles from './pet-menu.styles';
@@ -20,12 +20,18 @@ const PetMenu = ({options, onOptionPress}) => (
       renderItem={({item, index}) =>
         item == null ? (
           <View style={styles.descriptionImageContainer}>
-            <Image source={petImg[item.id]} style={styles.descriptionImage} />
+            <Image
+              source={petImg[`m${(index % 2) + 1}`]}
+              style={styles.descriptionImage}
+            />
           </View>
         ) : (
           <View style={styles.descriptionCard} key={index}>
-            <View style={styles.descriptionImageContainer}>
-              <Image source={petImg[item.id]} style={styles.descriptionImage} />
+            <View style={styles.descriptionImagecontainer}>
+              <Image
+                source={petImg[`m${(index % 2) + 1}`]}
+                style={styles.descriptionImage}
+              />
             </View>
             <View style={styles.descriptionTextContainer}>
               <Text style={styles.descriptionText}>
@@ -44,14 +50,13 @@ const PetMenu = ({options, onOptionPress}) => (
                 <Text bold>Sexo: </Text>
                 <Text>{item.gender}</Text>
               </Text>
-              <TouchableOpacity>
-                <Button
-                  onPress={() => onOptionPress(item.id)}
-                  style={styles.petButton}
-                  label="Ver más"
-                  textColor="white"
-                />
-              </TouchableOpacity>
+              <Button
+                onPress={() => onOptionPress(item.id)}
+                style={styles.petButton}
+                label="Ver más"
+                textColor="white"
+                small
+              />
             </View>
           </View>
         )
