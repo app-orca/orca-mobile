@@ -2,6 +2,7 @@ import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {HeaderNav, StepperView} from 'components';
 import CalendarMenu from './calendar-menu/calendar-menu';
+import EventDescription from './event-description/event-description';
 
 import styles from './calendar.styles';
 
@@ -44,14 +45,27 @@ const MOCKED_EVENTS = {
 };
 
 const Calendar = ({navigation}) => {
+  const [currentIndex, setCurrentIndex] = React.useState();
+
   const handleLogoPress = () => navigation.popToTop();
+  const handleCalendarShowMore = () => setCurrentIndex(1);
+
+  const handleGoBackPress = () => setCurrentIndex(0);
 
   return (
     <SafeAreaView style={styles.wrapper}>
-      <HeaderNav onLogoPress={handleLogoPress} title="Calendario" />
+      <HeaderNav
+        onBackPress={currentIndex > 0 ? handleGoBackPress : null}
+        onLogoPress={handleLogoPress}
+        title="Calendario"
+      />
       <CalendarHeader style={styles.calendarHeader} height="28%" />
-      <StepperView>
-        <CalendarMenu calendarData={MOCKED_EVENTS} />
+      <StepperView {...{currentIndex}}>
+        <CalendarMenu
+          onItemPress={handleCalendarShowMore}
+          calendarData={MOCKED_EVENTS}
+        />
+        <EventDescription />
       </StepperView>
     </SafeAreaView>
   );

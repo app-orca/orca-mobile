@@ -5,7 +5,7 @@ import {Text, Button, SocialMedia} from 'components';
 import styles from './calendar-menu.styles';
 import propTypes from 'prop-types';
 
-const CalendarMenu = ({calendarData}) => (
+const CalendarMenu = ({calendarData, onItemPress}) => (
   <ScrollView style={styles.eventsContainer}>
     <Text style={styles.calendarMonthText} black>
       {calendarData.month.toUpperCase()}
@@ -28,6 +28,7 @@ const CalendarMenu = ({calendarData}) => (
           <Button
             label="Ver más"
             style={styles.showMoreButton}
+            onPress={() => onItemPress(item.id)}
             textColor="white"
             small
           />
@@ -52,10 +53,12 @@ CalendarMenu.propTypes = {
       }),
     ).isRequired,
   }),
+  onItemPress: propTypes.func,
 };
 
 CalendarMenu.defaultProps = {
   calendarData: [],
+  onItemPress: () => null,
 };
 
 export default CalendarMenu;
