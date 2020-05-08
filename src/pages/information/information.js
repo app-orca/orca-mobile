@@ -1,15 +1,15 @@
 import React from 'react';
-import {Text, SafeAreaView, ScrollView} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
+import {SocialMedia, HeaderNav, Text} from 'components';
 
 import styles from './information.styles';
-import {SocialMedia, HeaderNav} from 'components';
 
 const Information = ({navigation}) => {
   const handleGoHomePress = () => navigation.popToTop();
 
   return (
     <SafeAreaView style={styles.container}>
-      <HeaderNav title={'¿Quienes Somos?'} onGoHomePress={handleGoHomePress} />
+      <HeaderNav title="¿Quienes Somos?" onGoHomePress={handleGoHomePress} />
       <ScrollView style={styles.containertext}>
         <Text style={styles.texto}>
           O.R.C.A. es la Organización por el Respeto y el Cuidado de los

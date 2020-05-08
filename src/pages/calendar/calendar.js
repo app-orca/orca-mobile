@@ -43,44 +43,48 @@ const MOCKED_EVENTS = {
   ],
 };
 
-const Calendar = () => (
-  <SafeAreaView style={styles.wrapper}>
-    <HeaderNav title="Calendario" />
-    <CalendarHeader style={styles.calendarHeader} height="28%" />
-    <ScrollView style={styles.eventsContainer}>
-      <Text style={styles.calendarMonthText} black>
-        {MOCKED_EVENTS.month.toUpperCase()}
-      </Text>
-      {MOCKED_EVENTS.events.map((item, index) => (
-        <View
-          style={[
-            styles.eventContainer,
-            index % 2 && styles.eventContainerInverse,
-          ]}
-          key={item.id}>
+const Calendar = ({navigation}) => {
+  const handleLogoPress = () => navigation.popToTop();
+
+  return (
+    <SafeAreaView style={styles.wrapper}>
+      <HeaderNav onLogoPress={handleLogoPress} title="Calendario" />
+      <CalendarHeader style={styles.calendarHeader} height="28%" />
+      <ScrollView style={styles.eventsContainer}>
+        <Text style={styles.calendarMonthText} black>
+          {MOCKED_EVENTS.month.toUpperCase()}
+        </Text>
+        {MOCKED_EVENTS.events.map((item, index) => (
           <View
             style={[
-              styles.eventDescriptionContainer,
-              index % 2
-                ? styles.eventDescriptionContainerRight
-                : styles.eventDescriptionContainerLeft,
-            ]}>
-            <Text style={styles.eventDesctiptionText}>{item.title}</Text>
-            <Button
-              label="Ver más"
-              style={styles.showMoreButton}
-              textColor="white"
-              small
-            />
+              styles.eventContainer,
+              index % 2 && styles.eventContainerInverse,
+            ]}
+            key={item.id}>
+            <View
+              style={[
+                styles.eventDescriptionContainer,
+                index % 2
+                  ? styles.eventDescriptionContainerRight
+                  : styles.eventDescriptionContainerLeft,
+              ]}>
+              <Text style={styles.eventDesctiptionText}>{item.title}</Text>
+              <Button
+                label="Ver más"
+                style={styles.showMoreButton}
+                textColor="white"
+                small
+              />
+            </View>
+            <Text style={styles.dayText} black>
+              {item.day}
+            </Text>
           </View>
-          <Text style={styles.dayText} black>
-            {item.day}
-          </Text>
-        </View>
-      ))}
-      <SocialMedia />
-    </ScrollView>
-  </SafeAreaView>
-);
+        ))}
+        <SocialMedia />
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
 
 export default Calendar;
