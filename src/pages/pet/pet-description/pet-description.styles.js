@@ -12,10 +12,6 @@ export default StyleSheet.create({
     padding: 20,
     marginHorizontal: 30,
   },
-  descriptionTitle: {
-    ...styles.textCenter,
-    marginVertical: 20,
-  },
   descriptionText: {
     letterSpacing: 1,
     textAlign: 'left',
@@ -32,22 +28,14 @@ export default StyleSheet.create({
   },
   swiperContainer: {
     ...styles.flexOne,
-    ...styles.bgPrimary,
     alignSelf: 'center',
     borderRadius: 40,
     marginHorizontal: 30,
     marginBottom: 20,
     overflow: 'hidden',
+    height: 180,
   },
   image: {
-    height: '100%',
     width: '100%',
-  },
-  controls: {
-    ...StyleSheet.absoluteFillObject,
-    ...styles.flexRow,
-    ...styles.alignItemsCenter,
-    ...styles.justifyBetween,
-    paddingHorizontal: 10,
   },
 });

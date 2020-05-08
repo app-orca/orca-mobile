@@ -1,30 +1,33 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import styles from '../../../styles';
 
 export default StyleSheet.create({
   wrapper: {
     ...styles.flexOne,
-    ...styles.justifyBetween,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
+    ...styles.alignItemsStretch,
+  },
+  descriptionTextContainer: {
+    ...styles.bgLightPurple,
+    borderRadius: 40,
+    padding: 20,
+    marginHorizontal: 30,
+    alignContent: 'center',
   },
   descriptionTitle: {
     ...styles.textCenter,
-    marginVertical: 20,
+    letterSpacing: 2.2,
+    fontSize: 25,
   },
-  descriptionText: {
-    textAlign: 'justify',
-    marginBottom: 30,
-  },
-  descriptionContainer: {
+  imageContainer: {
     ...styles.flexOne,
-    ...styles.bgLightCornFlower,
-    borderRadius: 40,
-    paddingHorizontal: 30,
-  },
-  donateButton: {
-    ...styles.bgLightPurpe,
-    marginVertical: 15,
     alignSelf: 'center',
+    borderRadius: 40,
+    marginHorizontal: 30,
+    marginBottom: 20,
+    overflow: 'hidden',
+  },
+  image: {
+    height: '100%',
+    width: '100%',
   },
 });

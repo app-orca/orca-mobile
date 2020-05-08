@@ -7,9 +7,40 @@ import LostDescription from './lost-description/lost-description';
 
 import styles from './lost.styles';
 
+import Bruno from '../../assets/images/lost/perdidos-interno-bruno.png';
+import Doki from '../../assets/images/lost/perdidos-interno-doki.png';
+import Itzhy from '../../assets/images/lost/perdidos-interno-itzhy.png';
+import Michi from '../../assets/images/lost/perdidos-interno-michi.png';
+
 const lostOptions = [
-  {label: 'Perdido 1', value: 'p1'},
-  {label: 'Perdido 2', value: 'p2'},
+  {
+    name: 'Bruno',
+    phone: '3458296589',
+    city: 'Bogotá',
+    src: Bruno,
+    id: 'p1',
+  },
+  {
+    name: 'Doki',
+    phone: '3458296589',
+    city: 'Medellín',
+    src: Doki,
+    id: 'p2',
+  },
+  {
+    name: 'Itzhy',
+    phone: '3458296589',
+    city: 'Bogotá',
+    src: Itzhy,
+    id: 'p3',
+  },
+  {
+    name: 'Michi',
+    phone: '3458296589',
+    city: 'Bogotá',
+    src: Michi,
+    id: 'p4',
+  },
 ];
 
 const Lost = ({navigation}) => {
@@ -20,12 +51,10 @@ const Lost = ({navigation}) => {
 
   const handleGoBack = () => setCurrentIndex(currentIndex - 1);
 
-  const handleOptionPress = value => {
-    setSelectedLost(lostOptions.find(lost => lost.value === value));
+  const handleOptionPress = id => {
+    setSelectedLost(lostOptions.find(lost => lost.id === id));
     setCurrentIndex(1);
   };
-
-  const handleLostPress = () => setCurrentIndex(2);
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -36,7 +65,7 @@ const Lost = ({navigation}) => {
       />
       <StepperView style={styles.wrapper} {...{currentIndex}}>
         <LostMenu onOptionPress={handleOptionPress} options={lostOptions} />
-        <LostDescription onLostPress={handleLostPress} lost={selectedLost} />
+        <LostDescription lost={selectedLost} />
       </StepperView>
     </SafeAreaView>
   );
