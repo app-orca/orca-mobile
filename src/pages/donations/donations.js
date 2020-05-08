@@ -17,14 +17,14 @@ const donationOptions = [
 
 const Donations = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedDonation, setSelecteDonation] = useState(donationOptions[0]);
+  const [selectedDonation, setSelectedDonation] = useState(donationOptions[0]);
 
   const handleGoHomePress = () => navigation.popToTop();
 
   const handleGoBack = () => setCurrentIndex(currentIndex - 1);
 
   const handleOptionPress = value => {
-    setSelecteDonation(
+    setSelectedDonation(
       donationOptions.find(donation => donation.value === value),
     );
 

@@ -37,9 +37,6 @@ export default StyleSheet.create({
     letterSpacing: 1,
     textAlign: 'left',
   },
-  title: {
-    fontWeight: 'bold',
-  },
   petButton: {
     ...styles.bgLightPurple,
     marginVertical: 10,

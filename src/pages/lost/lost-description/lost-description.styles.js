@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import styles from 'styles';
+import { StyleSheet } from 'react-native';
+import styles from '../../../styles';
 
 export default StyleSheet.create({
   wrapper: {
@@ -11,31 +11,23 @@ export default StyleSheet.create({
     borderRadius: 40,
     padding: 20,
     marginHorizontal: 30,
+    alignContent: 'center',
   },
-  descriptionText: {
-    letterSpacing: 1,
-    textAlign: 'left',
+  descriptionTitle: {
+    ...styles.textCenter,
+    letterSpacing: 2.2,
+    fontSize: 25,
   },
-  requirementsButton: {
-    ...styles.bgPrimary,
-    marginVertical: 15,
-    alignSelf: 'center',
-  },
-  adoptButton: {
-    ...styles.bgLightPurple,
-    marginVertical: 5,
-    alignSelf: 'center',
-  },
-  swiperContainer: {
+  imageContainer: {
     ...styles.flexOne,
     alignSelf: 'center',
     borderRadius: 40,
     marginHorizontal: 30,
     marginBottom: 20,
     overflow: 'hidden',
-    height: 180,
   },
   image: {
+    height: '100%',
     width: '100%',
   },
 });
