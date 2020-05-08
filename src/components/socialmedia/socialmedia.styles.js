@@ -9,7 +9,6 @@ export default StyleSheet.create({
     paddingVertical: 10,
   },
   texto: {
-    ...styles.flexOne,
     ...styles.text,
     ...styles.textCenter,
     fontSize: 18,

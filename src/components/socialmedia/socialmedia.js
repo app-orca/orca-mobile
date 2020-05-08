@@ -1,5 +1,6 @@
 import React from 'react';
-import {Linking, View, Text, Image, TouchableOpacity} from 'react-native';
+import {Linking, View, Image, TouchableOpacity} from 'react-native';
+import {Text} from 'components';
 
 import styles from './socialmedia.styles';
 
@@ -29,7 +30,7 @@ const data = [
 
 const SocialMedia = () => (
   <View style={styles.container}>
-    <Text style={styles.texto}>Para mas informacion:</Text>
+    <Text style={styles.texto}>Para más informacion:</Text>
     <View style={styles.socialMediaContainer}>
       {data.map((item, index) => (
         <TouchableOpacity
