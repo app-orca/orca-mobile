@@ -1,3 +1,6 @@
+### v0.13.1 [a7a0c6e]
+* (2020-05-08) v0.13.1 Minor bugfixes
+
 ### v0.13.0 [4f68c74]
 * (2020-05-08) v0.13.0 Added calendar screen
 
