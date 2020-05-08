@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, ViewPropTypes} from 'react-native';
 
 import styles from './stepper-view.styles';
 import propTypes from 'prop-types';
@@ -8,7 +8,7 @@ import propTypes from 'prop-types';
  * Renders a series of steps with passed screens,
  * it renders all passed compoents, so be careful using this
  */
-const StepperView = ({children, currentIndex}) => {
+const StepperView = ({children, currentIndex, style}) => {
   let pages = [children];
 
   if (children.length) {
@@ -18,7 +18,7 @@ const StepperView = ({children, currentIndex}) => {
   }
 
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, style]}>
       {pages[currentIndex > pages.length ? 0 : currentIndex]}
     </View>
   );
@@ -27,6 +27,7 @@ const StepperView = ({children, currentIndex}) => {
 StepperView.propTypes = {
   children: propTypes.node,
   currentIndex: propTypes.number,
+  style: ViewPropTypes.style,
 };
 
 StepperView.defaultProps = {

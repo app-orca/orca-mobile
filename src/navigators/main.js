@@ -16,8 +16,8 @@ const Stack = createStackNavigator();
 
 const MainStackNavigator = () => (
   <Stack.Navigator initialRouteName="Home">
-    <Stack.Screen name="Pet" component={Pet} />
-    <Stack.Screen name="Lost" component={Lost} />
+    <Stack.Screen name="Pet" component={Pet} options={{headerShown: false}} />
+    <Stack.Screen name="Lost" component={Lost} options={{headerShown: false}} />
     <Stack.Screen name="Tips" component={Tips} options={{headerShown: false}} />
     <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
     <Stack.Screen

@@ -14,7 +14,7 @@ export default StyleSheet.create({
   bgPurple: {
     backgroundColor: colors.purple.toString(),
   },
-  bgLightPurpe: {
+  bgLightPurple: {
     backgroundColor: colors.purpleLight.toString(),
   },
   bgCrimson: {
