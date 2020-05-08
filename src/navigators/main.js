@@ -7,7 +7,6 @@ import {
   Lost,
   Pet,
   Tips,
-  Requeriments,
   DescriptionPet,
   Information,
 } from 'pages';
@@ -15,27 +14,14 @@ import {
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => (
-  <Stack.Navigator initialRouteName="Home">
-    <Stack.Screen name="Pet" component={Pet} options={{headerShown: false}} />
-    <Stack.Screen name="Lost" component={Lost} options={{headerShown: false}} />
-    <Stack.Screen name="Tips" component={Tips} options={{headerShown: false}} />
-    <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
-    <Stack.Screen
-      name="Requeriments"
-      component={Requeriments}
-      options={{headerShown: false}}
-    />
+  <Stack.Navigator initialRouteName="Home" headerMode="none">
+    <Stack.Screen name="Pet" component={Pet} />
+    <Stack.Screen name="Lost" component={Lost} />
+    <Stack.Screen name="Tips" component={Tips} />
+    <Stack.Screen name="Home" component={Home} />
     <Stack.Screen name="Calendar" component={Calendar} />
-    <Stack.Screen
-      name="Information"
-      component={Information}
-      options={{headerShown: false}}
-    />
-    <Stack.Screen
-      name="Donations"
-      component={Donations}
-      options={{headerShown: false}}
-    />
+    <Stack.Screen name="Information" component={Information} />
+    <Stack.Screen name="Donations" component={Donations} />
     <Stack.Screen name="DescriptionPet" component={DescriptionPet} />
   </Stack.Navigator>
 );
