@@ -1,6 +1,16 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Calendar, Donations, Home, Lost, Pet, Tips} from '../pages';
+import {
+  Calendar,
+  Donations,
+  Home,
+  Lost,
+  Pet,
+  Tips,
+  Requeriments,
+  DescriptionPet,
+  Information,
+} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -10,12 +20,23 @@ const MainStackNavigator = () => (
     <Stack.Screen name="Lost" component={Lost} options={{headerShown: false}} />
     <Stack.Screen name="Tips" component={Tips} options={{headerShown: false}} />
     <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
+    <Stack.Screen
+      name="Requeriments"
+      component={Requeriments}
+      options={{headerShown: false}}
+    />
     <Stack.Screen name="Calendar" component={Calendar} />
+    <Stack.Screen
+      name="Information"
+      component={Information}
+      options={{headerShown: false}}
+    />
     <Stack.Screen
       name="Donations"
       component={Donations}
       options={{headerShown: false}}
     />
+    <Stack.Screen name="DescriptionPet" component={DescriptionPet} />
   </Stack.Navigator>
 );
 
