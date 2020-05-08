@@ -4,12 +4,22 @@ import {TouchableOpacity, Text, ViewPropTypes} from 'react-native';
 import styles from './button.styles';
 import propTypes from 'prop-types';
 
-const Button = ({label, children, style, onPress, textColor}) => (
-  // TODO: Finish implementation of button
-  <TouchableOpacity {...{onPress}} style={[styles.buttonContainer, style]}>
+const Button = ({label, children, style, onPress, textColor, small}) => (
+  <TouchableOpacity
+    {...{onPress}}
+    style={[
+      styles.buttonContainer,
+      small && styles.smallButtonContainer,
+      style,
+    ]}>
     {label ? (
-      <Text style={[styles.buttonText, {color: textColor}]}>
-        {label.toUpperCase()}
+      <Text
+        style={[
+          styles.buttonText,
+          small && styles.smallButtonText,
+          {color: textColor},
+        ]}>
+        {small ? label : label.toUpperCase()}
       </Text>
     ) : (
       children
@@ -22,8 +32,11 @@ Button.propTypes = {
   children: propTypes.node,
   style: ViewPropTypes.style,
   onPress: propTypes.func,
+  small: propTypes.bool,
 };
 
-Button.defaultProps = {};
+Button.defaultProps = {
+  small: false,
+};
 
 export default React.memo(Button);

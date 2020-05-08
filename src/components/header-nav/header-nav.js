@@ -34,4 +34,8 @@ HeaderNav.propTypes = {
   title: propTypes.string,
 };
 
+HeaderNav.defaultProps = {
+  title: '',
+};
+
 export default React.memo(HeaderNav);

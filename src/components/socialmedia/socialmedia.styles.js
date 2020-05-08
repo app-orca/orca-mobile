@@ -3,20 +3,27 @@ import styles from 'styles';
 
 export default StyleSheet.create({
   container: {
-    flex: 0.35,
-    ...styles.m0,
-    alignItems: 'center',
+    ...styles.alignItemsStretch,
+    width: '100%',
+    alignSelf: 'stretch',
+    paddingVertical: 10,
   },
   texto: {
     ...styles.flexOne,
     ...styles.text,
+    ...styles.textCenter,
     fontSize: 18,
     letterSpacing: 5,
-    marginVertical: 10,
+    marginBottom: 5,
   },
   imagen: {
-    marginHorizontal: 15,
     width: 50,
     height: 50,
+  },
+  socialMediaContainer: {
+    ...styles.flexRow,
+    ...styles.justifyAround,
+    width: '80%',
+    alignSelf: 'center',
   },
 });
