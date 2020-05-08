@@ -10,7 +10,7 @@ import {
   Requeriments,
   DescriptionPet,
   Information,
-} from '../pages';
+} from 'pages';
 
 const Stack = createStackNavigator();
 

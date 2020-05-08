@@ -1,4 +1,4 @@
-import fontStyles from '../../styles/fonts';
+import fontStyles from 'styles/fonts';
 
 /**
  * Represent diferent types of font types in array.
