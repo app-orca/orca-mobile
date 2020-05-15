@@ -7,7 +7,7 @@ const HTTP_METHODS = {
   POST: 'POST',
 };
 
-export class Http {
+export default class Http {
   /**
    * Creates a new Http class
    * @param {import('./uri').default} uri iniial url configuration
