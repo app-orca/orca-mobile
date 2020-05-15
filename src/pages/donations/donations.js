@@ -33,6 +33,8 @@ const Donations = ({navigation}) => {
 
   const handleDonatePress = () => setCurrentIndex(2);
 
+  const handleGoToTopStack = () => setCurrentIndex(0);
+
   return (
     <SafeAreaView style={styles.wrapper}>
       <HeaderNav
@@ -49,7 +51,7 @@ const Donations = ({navigation}) => {
           onDonatePress={handleDonatePress}
           donation={selectedDonation}
         />
-        <Donate />
+        <Donate onCancelPress={handleGoToTopStack} />
       </StepperView>
     </SafeAreaView>
   );

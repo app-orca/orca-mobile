@@ -1,12 +1,14 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import {Text, Button} from 'components';
 
 import styles from './donate.styles';
+import propTypes from 'prop-types';
 
 import PayULogo from 'assets/images/payu-logo.svg';
+import DonateButtonImage from 'assets/images/buttons/donate-btn.svg';
 
-const Donate = () => (
+const Donate = ({onCancelPress}) => (
   <View style={styles.wrapper}>
     <View style={styles.descriptionContainer}>
       <PayULogo style={styles.descriptionImage} height="60" />
@@ -17,17 +19,26 @@ const Donate = () => (
         app
       </Text>
     </View>
-    <Button
-      textColor="white"
-      style={[styles.donationButton, styles.donateButton]}
-      label="DONAR"
-    />
+
+    <TouchableOpacity>
+      <DonateButtonImage width="60%" style={styles.donationButton} />
+    </TouchableOpacity>
     <Button
       textColor="white"
       style={[styles.donationButton, styles.cancelButton]}
       label="CANCELAR"
+      onPress={onCancelPress}
+      small
     />
   </View>
 );
+
+Donate.propTypes = {
+  onCancelPress: propTypes.func,
+};
+
+Donate.defaultProps = {
+  onCancelPress: () => null,
+};
 
 export default Donate;

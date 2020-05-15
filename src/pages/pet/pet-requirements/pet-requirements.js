@@ -1,12 +1,19 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, Image, View} from 'react-native';
-import {Text, Button} from 'components';
+import {
+  SafeAreaView,
+  ScrollView,
+  Image,
+  View,
+  TouchableOpacity,
+} from 'react-native';
+import {Text} from 'components';
 
 import styles from './pet-requirements.styles';
 
 import PetRequirementsHeader from 'assets/images/requirements/requisitos-principal.png';
-import PetRequirementsRight from 'assets/images/requirements/requisitos-pata-derecha.png';
-import PetRequirementsLeft from 'assets/images/requirements/requisitos-pata-izquierda.png';
+import AdoptButtonImage from 'assets/images/buttons/adopt-btn.svg';
+import LeftLeg from 'assets/images/requirements/left-leg.svg';
+import RightLeg from 'assets/images/requirements/right-leg.svg';
 
 const PET_REQUIREMENTS_MOCK = [
   'Ser mayor de 22 años de edad. Presentar la identificación.',
@@ -20,7 +27,11 @@ const PET_REQUIREMENTS_MOCK = [
 const PetRequirements = () => (
   <SafeAreaView style={styles.container}>
     <ScrollView style={styles.containertext}>
-      <Image style={styles.logo} source={PetRequirementsHeader} />
+      <Image
+        style={styles.logo}
+        resizeMode="contain"
+        source={PetRequirementsHeader}
+      />
       {PET_REQUIREMENTS_MOCK.map((requirement, index) => (
         <View
           key={`pet-requirement-${index}`}
@@ -30,9 +41,9 @@ const PetRequirements = () => (
               styles.legContainer,
               !(index % 2) && styles.legContainerInverse,
             ]}>
-            <Image
-              source={index % 2 ? PetRequirementsLeft : PetRequirementsRight}
-            />
+            {React.createElement(index % 2 ? LeftLeg : RightLeg, {
+              width: '70%',
+            })}
             <Text style={styles.numeros}>{index + 1}</Text>
           </View>
           <Text
@@ -44,7 +55,9 @@ const PetRequirements = () => (
           </Text>
         </View>
       ))}
-      <Button style={styles.adoptButton} label="Adopta" textColor="white" />
+      <TouchableOpacity>
+        <AdoptButtonImage style={styles.adoptButton} width="60%" />
+      </TouchableOpacity>
     </ScrollView>
   </SafeAreaView>
 );

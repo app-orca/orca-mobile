@@ -21,9 +21,10 @@ export default StyleSheet.create({
     marginVertical: 15,
     alignSelf: 'center',
   },
+  adoptButtonContainer: {
+    width: '100%',
+  },
   adoptButton: {
-    ...styles.bgLightPurple,
-    marginVertical: 5,
     alignSelf: 'center',
   },
   swiperContainer: {

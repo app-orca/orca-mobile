@@ -16,15 +16,17 @@ export default StyleSheet.create({
     ...styles.textCenter,
     color: colors.crimson.withAlpha(0.6).toString(),
     fontSize: 60,
-    padding: 10,
   },
   logo: {
     alignSelf: 'center',
+    width: '70%',
     marginBottom: 40,
     marginTop: 15,
   },
   legContainer: {
     ...styles.flexRow,
+    ...styles.justifyBetween,
+    ...styles.alignItemsCenter,
   },
   legContainerInverse: {
     ...styles.flexRowReverse,

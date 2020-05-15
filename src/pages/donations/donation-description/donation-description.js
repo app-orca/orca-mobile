@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, ScrollView} from 'react-native';
-import {Text, Button} from 'components';
+import {View, ScrollView, TouchableOpacity} from 'react-native';
+import {Text} from 'components';
 
 import styles from './donation-description.style';
 import propTypes from 'prop-types';
+
+import DonateButtonImage from 'assets/images/buttons/donate-btn.svg';
 
 const MOCK_TEXT =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula felis sed enim mollis, a eleifend arcu placerat. Vivamus consectetur a lorem id sagittis. Donec vel pellentesque urna. Aliquam lacus massa, sollicitudin a libero sit amet, blandit fermentum est. In cursus posuere odio, sit amet cursus sem venenatis vitae. Etiam eu cursus magna, ut consectetur tellus. In eu mauris quis ante luctus cursus in at leo. Maecenas a bibendum nunc. Pellentesque tempor velit ut eros tempus, nec hendrerit magna vestibulum. Nunc eget lectus non velit vestibulum ultricies. Donec faucibus ac sem ut aliquet. \n' +
@@ -17,12 +19,9 @@ const DonationDescription = ({donation, onDonatePress}) => (
       </Text>
       <Text style={styles.descriptionText}>{MOCK_TEXT}</Text>
     </ScrollView>
-    <Button
-      onPress={onDonatePress}
-      style={styles.donateButton}
-      label="Donar"
-      textColor="white"
-    />
+    <TouchableOpacity onPress={onDonatePress}>
+      <DonateButtonImage width="60%" style={styles.donateButton} />
+    </TouchableOpacity>
   </View>
 );
 

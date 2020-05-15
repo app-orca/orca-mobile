@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, ScrollView} from 'react-native';
+import {View, Image, ScrollView, TouchableOpacity} from 'react-native';
 import {Text, Button} from 'components';
 import Swiper from 'react-native-swiper';
 
@@ -8,6 +8,7 @@ import propTypes from 'prop-types';
 
 import img1 from 'assets/images/pets/tussy-interno-1.png';
 import img2 from 'assets/images/pets/tussy-interno-2.png';
+import AdoptButtonImage from 'assets/images/buttons/adopt-btn.svg';
 
 const PetDescription = ({pet, onPetPress}) => {
   return (
@@ -48,13 +49,13 @@ const PetDescription = ({pet, onPetPress}) => {
           style={styles.requirementsButton}
           label="Requisitos"
           textColor="white"
+          small
         />
-        <Button
-          onPress={onPetPress}
-          style={styles.adoptButton}
-          label="Adopta"
-          textColor="white"
-        />
+        <TouchableOpacity
+          style={styles.adoptButtonContainer}
+          onPress={onPetPress}>
+          <AdoptButtonImage width="60%" style={styles.adoptButton} />
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
