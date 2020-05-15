@@ -8,23 +8,34 @@ import propTypes from 'prop-types';
 import DogTipsHeader from 'assets/images/dogs-tips-header.svg';
 import CatTipsHeader from 'assets/images/cats-tips-header.svg';
 
-// Tips temporales, son un dummie mientras tenemos servicios
-const MOCKED_TIPS = [
-  'Praesent sed risus sit amet mauris vehicula tempus vitae at ipsum. Cras vitae odio interdum, accumsan nulla sit amet, tristique diam. Donec suscipit ornare risus a interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget facilisis quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec mollis rhoncus tortor a fermentum. Nullam elit erat, commodo eu tincidunt sit amet, sollicitudin et massa. Sed eleifend arcu a scelerisque ullamcorper.',
-  'Donec sollicitudin volutpat nisi quis semper. Phasellus tempus efficitur rhoncus. Vivamus eget sodales arcu. Nullam sed pretium ligula. Vivamus ornare ante et augue placerat, eget dignissim eros sagittis.',
-  'Sed congue sed nibh id consectetur. Duis dictum eu turpis quis facilisis. Sed non augue sed quam suscipit blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc in feugiat dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed blandit consectetur nunc sed porttitor.',
-  'Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vel tellus lacus. Aliquam nec tempus est. Nulla laoreet congue massa quis porttitor. Suspendisse ultrices id velit at finibus. Quisque metus sapien, egestas non erat sit amet, consectetur dignissim lorem. Aenean vitae ornare purus. Etiam in nisi eu magna faucibus elementum eget varius dolor.',
-];
-
 const PET_HEADERS = {
   CAN: DogTipsHeader,
   FEL: CatTipsHeader,
 };
 
+const PET_TIPS = {
+  CAN: [
+    'Ponerle una identificación externa: que tu perro tenga una placa o collar que tenga su nombre  y tus datos de contacto como tu numero de teléfono o dirección es de las cosas mas importantes, pues si por alguna razón tu perro huye o se pierde, entonces tendrás mas oportunidades de poder encontrarlo.',
+    'Seguros: si tienes un seguro para tu perro este te podría ayudar en caso de que tengas algún problema tanto con tu perro o si tu perro tuvo algún accidente con otro animal o otra persona.',
+    'Lleva a tu mascota al veterinario de manera regular: es bueno tener un veterinario de confianza donde puedas llevar a tu perro en caso de problemas o simplemente por un revisión, vacunas, etc',
+    'Higiene del animal: es importante mantener la higiene del al día: orejas, boca y pelo.',
+    'Procura tener un ambiente seguro: evita totalmente tener cosas peligrosas como: Plantas peligrosas para ellos como: lirios, trébol, dedalera, tejo, ruibarbo, etc. Enchufes, cables alcanzables, etc.',
+    'Debemos limpiar: sus bebederos de agua y contenedores de comida todos los días.',
+  ],
+  FEL: [
+    'El baño: el shampoo debe ser adecuado para cada mascota. Usa algodón en la orejas para evitar infecciones.',
+    'Su pelaje: las razas de pelo largo es necesario cepillarlas con regularidad para evitar enredos.',
+    'Cuida sus dientes: cepilla sus dientes regularmente y usa siempre una crema dental especial.',
+    'Uñas: corta sus uñas con regularidad pata evitar que sientas molestias al caminar.',
+    'Alimentación: si tu animal de compañía es un cachorro le tendrás que racionar la comida tres veces al día, cuando sea adulto bastará con dos o una vez al día. Los gatos al contrario que los perros saben racionar la comida bastante bien. Recuerda siempre tener agua fresca a su disposición y ten en cuenta los cuidados de tu animal de compañía en los meses más calurosos.',
+    'Todo por su salud: Parásitos: Los gatos y perros deben tratarse contra parásitos internos cada 3 meses, y muy especialmente cuando son cachorros, y antes de vacunarse. También existen parásitos externos, como pulgas y garrapatas que se erradican utilizando productos apropiados.  Vacunas: Lo primero que debes saber, es que si tu animal de compañía no está vacunado no puede entrar en contacto con otros animales ni con el exterior durante los dos primeros meses de v ida. El plan de vacunación variará en función de la raza, estado inmunológico y estilo de vida. Esto ayudara a evitar  enfermedades como parvovirosis, moquillo o hepatitis canina, en el caso de los perros, y otras como calicivirus, panleucopenia, rinotraqueítis, en el caso de los gatos.',
+  ],
+};
+
 const TipsDescription = ({petType}) => (
   <View style={styles.wrapper}>
     <FlatList
-      data={[null, ...MOCKED_TIPS, ...MOCKED_TIPS.reverse(), ...MOCKED_TIPS]}
+      data={[null, ...PET_TIPS[petType]]}
       renderItem={({item, index}) =>
         item == null ? (
           React.createElement(PET_HEADERS[petType], {

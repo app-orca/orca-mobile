@@ -42,7 +42,7 @@ const Tips = ({navigation}) => {
       <HeaderNav
         title={screenTitle}
         onBackPress={handleGoBackPress}
-        onGoHomePress={handleGoHomePress}
+        onLogoPress={handleGoHomePress}
       />
       <StepperView {...{currentIndex}}>
         <TipsMenu onOptionPress={handleOptionPress} options={TIPS_OPTIONS} />

@@ -50,7 +50,7 @@ const Pet = ({route, navigation}) => {
     <SafeAreaView style={styles.wrapper}>
       <HeaderNav
         onBackPress={currentIndex > 0 ? handleGoBack : null}
-        onGoHomePress={handleGoHomePress}
+        onLogoPress={handleGoHomePress}
         title="Mascotas"
       />
       <StepperView style={styles.wrapper} {...{currentIndex}}>
