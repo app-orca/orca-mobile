@@ -32,7 +32,15 @@ const Pet = ({route, navigation}) => {
   const handleGoBack = () => setCurrentIndex(currentIndex - 1);
 
   const handleOptionPress = id => {
-    setSelectedPet(petOptions.find(pet => pet.id === id));
+    const found = petOptions.find(pet => pet.id === id);
+    setIsLoading(true);
+    setSelectedPet(found);
+
+    petsService.getPetInfo(id).then(data => {
+      setSelectedPet(data[0]);
+      console.log(data);
+      setIsLoading(false);
+    });
     setCurrentIndex(1);
   };
 
@@ -51,7 +59,11 @@ const Pet = ({route, navigation}) => {
           onOptionPress={handleOptionPress}
           options={petOptions}
         />
-        <PetDescription onPetPress={handlePetPress} pet={selectedPet} />
+        <PetDescription
+          {...{isLoading}}
+          onPetPress={handlePetPress}
+          pet={selectedPet}
+        />
         <PetRequirements />
         <PetAdopt />
       </StepperView>

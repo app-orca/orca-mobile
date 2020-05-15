@@ -24,9 +24,7 @@ export default class Http {
    * @return {Promise<any>}
    */
   makeRequest(path, method = HTTP_METHODS.GET, config = {}) {
-    const requestUrl = this.uri
-      .resolve(path, {params: config.params || {}})
-      .toString();
+    const requestUrl = this.uri.resolve(path, config.params || {}).toString();
 
     return fetch(requestUrl, {
       method,

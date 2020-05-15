@@ -8,8 +8,8 @@ export default StyleSheet.create({
   },
   descriptionTextContainer: {
     ...styles.bgLightPurple,
-    borderRadius: 40,
-    padding: 20,
+    borderRadius: 20,
+    padding: 15,
     marginHorizontal: 30,
   },
   descriptionText: {
@@ -30,7 +30,7 @@ export default StyleSheet.create({
   swiperContainer: {
     ...styles.flexOne,
     alignSelf: 'center',
-    borderRadius: 40,
+    borderRadius: 30,
     marginHorizontal: 30,
     marginBottom: 20,
     overflow: 'hidden',
@@ -38,5 +38,16 @@ export default StyleSheet.create({
   },
   image: {
     width: '100%',
+    height: '100%',
+  },
+  loadingIndicatorContainer: {
+    ...styles.flexRow,
+    paddingVertical: 10,
+  },
+  loadingIndicatorText: {
+    ...styles.flexOne,
+    textAlign: 'center',
+    fontSize: 16,
+    paddingHorizontal: 10,
   },
 });

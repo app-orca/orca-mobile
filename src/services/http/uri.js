@@ -51,12 +51,13 @@ export default class Uri {
       .join('/');
 
     // Convert object into a valid string
-    const queryParamsString = Object.keys(this.params)
-      .reduce((last, [key, value]) => `&${key}=${value}`, '')
+    const queryParamsString = Object.entries(this.params)
+      .reduce((last, [key, value]) => `${last}&${key}=${value}`, '')
       .substr(1);
 
     url += `${completePath}?${queryParamsString}`;
 
+    console.log(url);
     return url;
   }
 }
