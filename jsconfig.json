@@ -7,7 +7,7 @@
       "components/*": ["./components"],
       "navigators/*": ["./navigators"],
       "pages/*": ["./pages"],
-      "services/*": ["./services"],
+      "services/*": ["./services", "./services/*"],
       "styles/*": ["./styles"]
     }
   }

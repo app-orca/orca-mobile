@@ -1,10 +1,13 @@
 export default class Uri {
   /**
    * Returns a new URI instance with an http:// prefix
+   * @param {string} baseUrl Base url for the request
+   * @param {string[]?} paths Array of paths of the htp request
+   * @param {{[key: string]: string}} params query parameters
    */
-  static http(baseUrl) {
+  static http(baseUrl, paths = [], params = {}) {
     // Creates the object
-    return new Uri(baseUrl);
+    return new Uri(baseUrl, 'http', paths, params);
   }
 
   /**
@@ -24,6 +27,7 @@ export default class Uri {
   /**
    * Appends new paths to the current url and return a new instance
    * @param {string[]} paths Array of new paths
+   * @param {{[key: string]: string}} params query parameters
    */
   resolve(paths, params) {
     const {base, protocol, paths: lastPaths, params: lastParams} = this;

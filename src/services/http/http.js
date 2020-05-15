@@ -21,7 +21,7 @@ export default class Http {
    * @param {string[]} path path to make the request
    * @param {'GET' | 'POST' | 'PUT' | 'PATCH'} method Http call method
    * @param {{body: string; params: string; headers: string;}} config Request configuration
-   * @return {Promise<Response>}
+   * @return {Promise<any>}
    */
   makeRequest(path, method = HTTP_METHODS.GET, config = {}) {
     const requestUrl = this.uri
@@ -35,6 +35,12 @@ export default class Http {
         ...HTTP_DEFAULT_HEADERS,
         ...(config.headers || {}),
       },
+    }).then(response => {
+      if (response.status !== 200) {
+        throw response.text();
+      }
+
+      return response.json();
     });
   }
 
@@ -42,7 +48,7 @@ export default class Http {
    * Make a get http request
    * @param {string[]} path path to make the request
    * @param {{params: string; headers: string;}} config Request configuration
-   * @return {Promise<Response>}
+   * @return {Promise<any>}
    */
   get(path, config = {}) {
     return this.makeRequest(path, HTTP_METHODS.GET, config);
@@ -52,9 +58,13 @@ export default class Http {
    * Make a http request
    * @param {string[]} path path to make the request
    * @param {{body: string; params: string; headers: string;}} config Request configuration
-   * @return {Promise<Response>}
+   * @return {Promise<any>}
    */
   post(path, config = {}) {
     return this.makeRequest(path, HTTP_METHODS.POST, config);
+  }
+
+  resolvePaths(paths) {
+    return new Http(this.uri.resolve(paths));
   }
 }

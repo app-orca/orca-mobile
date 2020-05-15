@@ -1,6 +1,6 @@
 import React from 'react';
 import {Linking, View, Image, TouchableOpacity} from 'react-native';
-import {Text} from 'components';
+import Text from '../text/text';
 
 import styles from './socialmedia.styles';
 
