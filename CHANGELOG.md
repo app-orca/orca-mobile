@@ -1,3 +1,6 @@
+### v0.14.0 [00b1064]
+* (2020-05-14) v0.14.0 Added laucher icons
+
 ### v0.13.1 [a7a0c6e]
 * (2020-05-08) v0.13.1 Minor bugfixes
 
