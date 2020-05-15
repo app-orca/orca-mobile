@@ -62,3 +62,7 @@ package-lock.json
 
 # Version utilities
 version*
+
+app_keys/
+
+key.properties

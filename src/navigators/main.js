@@ -1,15 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {
-  Calendar,
-  Donations,
-  Home,
-  Lost,
-  Pet,
-  Tips,
-  DescriptionPet,
-  Information,
-} from 'pages';
+import {Calendar, Donations, Home, Lost, Pet, Tips, Information} from 'pages';
 
 const Stack = createStackNavigator();
 
@@ -22,7 +13,6 @@ const MainStackNavigator = () => (
     <Stack.Screen name="Calendar" component={Calendar} />
     <Stack.Screen name="Information" component={Information} />
     <Stack.Screen name="Donations" component={Donations} />
-    <Stack.Screen name="DescriptionPet" component={DescriptionPet} />
   </Stack.Navigator>
 );
 
