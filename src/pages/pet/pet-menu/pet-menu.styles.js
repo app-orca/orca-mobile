@@ -41,4 +41,8 @@ export default StyleSheet.create({
     alignSelf: 'center',
     paddingHorizontal: 20,
   },
+  loadingContainer: {
+    ...styles.alignItemsCenter,
+    marginTop: 10,
+  },
 });

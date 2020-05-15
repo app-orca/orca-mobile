@@ -17,11 +17,17 @@ const options = [
     screen: 'Pet',
     label: 'Felinos',
     component: CatsIcon,
+    params: {
+      type: 'Felinos',
+    },
   },
   {
     screen: 'Pet',
     label: 'Caninos',
     component: CansIcon,
+    params: {
+      type: 'Caninos',
+    },
   },
   {
     screen: 'Tips',
@@ -46,7 +52,9 @@ const options = [
 ];
 
 const Home = ({navigation}) => {
-  const handleOptionPress = screen => navigation.navigate(screen);
+  const handleOptionPress = (screen, params = {}) =>
+    navigation.navigate(screen, params);
+
   const onClick = () => navigation.navigate('Information');
 
   let optionsRows = [...options];
@@ -67,7 +75,7 @@ const Home = ({navigation}) => {
             {row.map((option, itemIndex) => (
               <TouchableOpacity
                 activeOpacity={0.6}
-                onPress={() => handleOptionPress(option.screen)}
+                onPress={() => handleOptionPress(option.screen, option.params)}
                 style={styles.option}
                 key={itemIndex}>
                 {React.createElement(option.component, {

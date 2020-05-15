@@ -63,8 +63,8 @@ const PetDescription = ({pet, onPetPress}) => {
 
 PetDescription.propTypes = {
   pet: propTypes.shape({
-    name: propTypes.string.isRequired,
-    id: propTypes.string.isRequired,
+    name: propTypes.string,
+    id: propTypes.string,
   }),
   onPetPress: propTypes.func,
 };

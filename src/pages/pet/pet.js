@@ -1,64 +1,31 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
-
 import {HeaderNav, StepperView} from 'components';
 import PetMenu from './pet-menu/pet-menu';
+import PetAdopt from './pet-adopt/pet-adopt';
 import PetDescription from './pet-description/pet-description';
 import PetRequirements from './pet-requirements/pet-requirements';
-import PetAdopt from './pet-adopt/pet-adopt';
 
 import styles from './pet.styles';
 
-const petOptions = [
-  {
-    name: 'Tussy',
-    description: 'soy un gato',
-    age: 2,
-    breed: 'gato :v',
-    gender: 'macho',
-    type: 'gato',
-    leukemia: 'negativo',
-    sida: 'negativo',
-    id: 'm1',
-  },
-  {
-    name: 'Pacho',
-    description: 'soy un perro',
-    age: 2,
-    breed: 'perro :v',
-    gender: 'hembra',
-    type: 'perro',
-    leukemia: 'negativo',
-    sida: 'negativo',
-    id: 'm2',
-  },
-  {
-    name: 'Pacho',
-    description: 'soy un perro',
-    age: 2,
-    breed: 'perro :v',
-    gender: 'hembra',
-    type: 'perro',
-    leukemia: 'negativo',
-    sida: 'negativo',
-    id: 'm3',
-  },
-  {
-    name: 'Pacho',
-    description: 'soy un perro',
-    age: 2,
-    breed: 'perro :v',
-    gender: 'hembra',
-    type: 'perro',
-    leukemia: 'negativo',
-    sida: 'negativo',
-    id: 'm4',
-  },
-];
+import {petsService} from 'services/api';
 
-const Pet = ({navigation}) => {
+const Pet = ({route, navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedPet, setSelectedPet] = useState(petOptions[0]);
+  const [petOptions, setPetOptions] = useState([]);
+  const [selectedPet, setSelectedPet] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  // get passed pet type on params
+  const {type} = route.params;
+
+  useEffect(() => {
+    setIsLoading(true);
+    petsService.getPetByType(type).then(data => {
+      setPetOptions(data);
+      setIsLoading(false);
+    });
+  }, [type]);
 
   const handleGoHomePress = () => navigation.popToTop();
 
@@ -79,7 +46,11 @@ const Pet = ({navigation}) => {
         title="Mascotas"
       />
       <StepperView style={styles.wrapper} {...{currentIndex}}>
-        <PetMenu onOptionPress={handleOptionPress} options={petOptions} />
+        <PetMenu
+          {...{isLoading}}
+          onOptionPress={handleOptionPress}
+          options={petOptions}
+        />
         <PetDescription onPetPress={handlePetPress} pet={selectedPet} />
         <PetRequirements />
         <PetAdopt />
